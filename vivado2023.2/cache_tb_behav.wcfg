@@ -11,15 +11,20 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="558.292 ns"></ZoomStartTime>
-      <ZoomEndTime time="628.543 ns"></ZoomEndTime>
-      <Cursor1Time time="565.892 ns"></Cursor1Time>
+      <ZoomStartTime time="3,117.672 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,282.466 ns"></ZoomEndTime>
+      <Cursor1Time time="3,203.267 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <NameColumnWidth column_width="196"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
+   <wave_markers>
+      <marker time="745000" label="" />
+      <marker time="825000" label="" />
+      <marker time="895000" label="" />
+   </wave_markers>
    <wvobject fp_name="/cache_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -28,68 +33,440 @@
       <obj_property name="ElementShortName">we</obj_property>
       <obj_property name="ObjectShortName">we</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/hit" type="logic">
-      <obj_property name="ElementShortName">hit</obj_property>
-      <obj_property name="ObjectShortName">hit</obj_property>
+   <wvobject fp_name="/cache_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cache_tb/read_en" type="logic">
+      <obj_property name="ElementShortName">read_en</obj_property>
+      <obj_property name="ObjectShortName">read_en</obj_property>
    </wvobject>
    <wvobject fp_name="/cache_tb/addr" type="array">
-      <obj_property name="ElementShortName">addr[13:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[13:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/cache_tb/data" type="array">
-      <obj_property name="ElementShortName">data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data[31:0]</obj_property>
+      <obj_property name="ElementShortName">addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/cache_tb/dout" type="array">
       <obj_property name="ElementShortName">dout[31:0]</obj_property>
       <obj_property name="ObjectShortName">dout[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/word_offset" type="array">
-      <obj_property name="ElementShortName">word_offset[2:0]</obj_property>
-      <obj_property name="ObjectShortName">word_offset[2:0]</obj_property>
+   <wvobject fp_name="/cache_tb/memValid" type="logic">
+      <obj_property name="ElementShortName">memValid</obj_property>
+      <obj_property name="ObjectShortName">memValid</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/set_index" type="array">
-      <obj_property name="ElementShortName">set_index[4:0]</obj_property>
-      <obj_property name="ObjectShortName">set_index[4:0]</obj_property>
+   <wvobject type="divider" fp_name="divider3696">
+      <obj_property name="label">CACHE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/tag" type="array">
-      <obj_property name="ElementShortName">tag[6:0]</obj_property>
-      <obj_property name="ObjectShortName">tag[6:0]</obj_property>
+   <wvobject fp_name="group3731" type="group">
+      <obj_property name="label">CAche</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cache_tb/DUT/RST" type="logic">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_CLK" type="logic">
+         <obj_property name="ElementShortName">MEM_CLK</obj_property>
+         <obj_property name="ObjectShortName">MEM_CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_RDEN1" type="logic">
+         <obj_property name="ElementShortName">MEM_RDEN1</obj_property>
+         <obj_property name="ObjectShortName">MEM_RDEN1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_RDEN2" type="logic">
+         <obj_property name="ElementShortName">MEM_RDEN2</obj_property>
+         <obj_property name="ObjectShortName">MEM_RDEN2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_WE2" type="logic">
+         <obj_property name="ElementShortName">MEM_WE2</obj_property>
+         <obj_property name="ObjectShortName">MEM_WE2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_ADDR1" type="array">
+         <obj_property name="ElementShortName">MEM_ADDR1[13:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR1[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_ADDR2" type="array">
+         <obj_property name="ElementShortName">MEM_ADDR2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_DIN2" type="array">
+         <obj_property name="ElementShortName">MEM_DIN2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DIN2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_SIZE" type="array">
+         <obj_property name="ElementShortName">MEM_SIZE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_SIZE[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_SIGN" type="logic">
+         <obj_property name="ElementShortName">MEM_SIGN</obj_property>
+         <obj_property name="ObjectShortName">MEM_SIGN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_DOUT1" type="array">
+         <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/MEM_DOUT2" type="array">
+         <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/memValid1" type="logic">
+         <obj_property name="ElementShortName">memValid1</obj_property>
+         <obj_property name="ObjectShortName">memValid1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/memValid2" type="logic">
+         <obj_property name="ElementShortName">memValid2</obj_property>
+         <obj_property name="ObjectShortName">memValid2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/imem_hit" type="logic">
+         <obj_property name="ElementShortName">imem_hit</obj_property>
+         <obj_property name="ObjectShortName">imem_hit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cl_full" type="logic">
+         <obj_property name="ElementShortName">cl_full</obj_property>
+         <obj_property name="ObjectShortName">cl_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/mm_valid" type="logic">
+         <obj_property name="ElementShortName">mm_valid</obj_property>
+         <obj_property name="ObjectShortName">mm_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_data" type="array">
+         <obj_property name="ElementShortName">instr_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/full_cl" type="logic">
+         <obj_property name="ElementShortName">full_cl</obj_property>
+         <obj_property name="ObjectShortName">full_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/line_in_buffer" type="array">
+         <obj_property name="ElementShortName">line_in_buffer[31:0]</obj_property>
+         <obj_property name="ObjectShortName">line_in_buffer[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr" type="array">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/line_buffer" type="array">
+         <obj_property name="ElementShortName">line_buffer[31:0]</obj_property>
+         <obj_property name="ObjectShortName">line_buffer[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/line_addr" type="array">
+         <obj_property name="ElementShortName">line_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">line_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/we_imem" type="logic">
+         <obj_property name="ElementShortName">we_imem</obj_property>
+         <obj_property name="ObjectShortName">we_imem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/we_cl" type="logic">
+         <obj_property name="ElementShortName">we_cl</obj_property>
+         <obj_property name="ObjectShortName">we_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/next_cl" type="logic">
+         <obj_property name="ElementShortName">next_cl</obj_property>
+         <obj_property name="ObjectShortName">next_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/re_mm" type="logic">
+         <obj_property name="ElementShortName">re_mm</obj_property>
+         <obj_property name="ObjectShortName">re_mm</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/re_imem" type="logic">
+         <obj_property name="ElementShortName">re_imem</obj_property>
+         <obj_property name="ObjectShortName">re_imem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/hit" type="logic">
+         <obj_property name="ElementShortName">hit</obj_property>
+         <obj_property name="ObjectShortName">hit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/clr" type="logic">
+         <obj_property name="ElementShortName">clr</obj_property>
+         <obj_property name="ObjectShortName">clr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/mem_valid_mm" type="logic">
+         <obj_property name="ElementShortName">mem_valid_mm</obj_property>
+         <obj_property name="ObjectShortName">mem_valid_mm</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/set0" type="array">
-      <obj_property name="ElementShortName">set0[31:0][255:0]</obj_property>
-      <obj_property name="ObjectShortName">set0[31:0][255:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject type="divider" fp_name="divider3735">
+      <obj_property name="label">L1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/set1" type="array">
-      <obj_property name="ElementShortName">set1[31:0][255:0]</obj_property>
-      <obj_property name="ObjectShortName">set1[31:0][255:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject fp_name="group3732" type="group">
+      <obj_property name="label">L1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/we" type="logic">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/addr" type="array">
+         <obj_property name="ElementShortName">addr[13:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/data" type="array">
+         <obj_property name="ElementShortName">data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/dout" type="array">
+         <obj_property name="ElementShortName">dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/hit" type="logic">
+         <obj_property name="ElementShortName">hit</obj_property>
+         <obj_property name="ObjectShortName">hit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/set0" type="array">
+         <obj_property name="ElementShortName">set0[31:0][255:0]</obj_property>
+         <obj_property name="ObjectShortName">set0[31:0][255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/set1" type="array">
+         <obj_property name="ElementShortName">set1[31:0][255:0]</obj_property>
+         <obj_property name="ObjectShortName">set1[31:0][255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/tag0" type="array">
+         <obj_property name="ElementShortName">tag0[31:0][5:0]</obj_property>
+         <obj_property name="ObjectShortName">tag0[31:0][5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/tag1" type="array">
+         <obj_property name="ElementShortName">tag1[31:0][5:0]</obj_property>
+         <obj_property name="ObjectShortName">tag1[31:0][5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/valid0" type="array">
+         <obj_property name="ElementShortName">valid0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">valid0[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/valid1" type="array">
+         <obj_property name="ElementShortName">valid1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">valid1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/lru_bits" type="array">
+         <obj_property name="ElementShortName">lru_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">lru_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/line_buffer" type="array">
+         <obj_property name="ElementShortName">line_buffer[255:0]</obj_property>
+         <obj_property name="ObjectShortName">line_buffer[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/word_offset" type="array">
+         <obj_property name="ElementShortName">word_offset[2:0]</obj_property>
+         <obj_property name="ObjectShortName">word_offset[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/set_index" type="array">
+         <obj_property name="ElementShortName">set_index[4:0]</obj_property>
+         <obj_property name="ObjectShortName">set_index[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/instr_mem/tag" type="array">
+         <obj_property name="ElementShortName">tag[6:0]</obj_property>
+         <obj_property name="ObjectShortName">tag[6:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/tag0" type="array">
-      <obj_property name="ElementShortName">tag0[31:0][5:0]</obj_property>
-      <obj_property name="ObjectShortName">tag0[31:0][5:0]</obj_property>
+   <wvobject type="divider" fp_name="divider3736">
+      <obj_property name="label">CL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/tag1" type="array">
-      <obj_property name="ElementShortName">tag1[31:0][5:0]</obj_property>
-      <obj_property name="ObjectShortName">tag1[31:0][5:0]</obj_property>
+   <wvobject fp_name="group3733" type="group">
+      <obj_property name="label">CL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/clr" type="logic">
+         <obj_property name="ElementShortName">clr</obj_property>
+         <obj_property name="ObjectShortName">clr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/addr_i" type="array">
+         <obj_property name="ElementShortName">addr_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/data_i" type="array">
+         <obj_property name="ElementShortName">data_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/we" type="logic">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/next" type="logic">
+         <obj_property name="ElementShortName">next</obj_property>
+         <obj_property name="ObjectShortName">next</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/addr_o" type="array">
+         <obj_property name="ElementShortName">addr_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/data_o" type="array">
+         <obj_property name="ElementShortName">data_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/counter" type="array">
+         <obj_property name="ElementShortName">counter[2:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_line_adapter/line_buffer" type="array">
+         <obj_property name="ElementShortName">line_buffer[7:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">line_buffer[7:0][31:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/valid0" type="array">
-      <obj_property name="ElementShortName">valid0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">valid0[31:0]</obj_property>
+   <wvobject type="divider" fp_name="divider3737">
+      <obj_property name="label">MM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/valid1" type="array">
-      <obj_property name="ElementShortName">valid1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">valid1[31:0]</obj_property>
+   <wvobject fp_name="group3734" type="group">
+      <obj_property name="label">MM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_CLK" type="logic">
+         <obj_property name="ElementShortName">MEM_CLK</obj_property>
+         <obj_property name="ObjectShortName">MEM_CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/RST" type="logic">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_RDEN1" type="logic">
+         <obj_property name="ElementShortName">MEM_RDEN1</obj_property>
+         <obj_property name="ObjectShortName">MEM_RDEN1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_RDEN2" type="logic">
+         <obj_property name="ElementShortName">MEM_RDEN2</obj_property>
+         <obj_property name="ObjectShortName">MEM_RDEN2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_WE2" type="logic">
+         <obj_property name="ElementShortName">MEM_WE2</obj_property>
+         <obj_property name="ObjectShortName">MEM_WE2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_ADDR1" type="array">
+         <obj_property name="ElementShortName">MEM_ADDR1[13:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR1[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_ADDR2" type="array">
+         <obj_property name="ElementShortName">MEM_ADDR2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ADDR2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_DIN2" type="array">
+         <obj_property name="ElementShortName">MEM_DIN2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DIN2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_SIZE" type="array">
+         <obj_property name="ElementShortName">MEM_SIZE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_SIZE[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_SIGN" type="logic">
+         <obj_property name="ElementShortName">MEM_SIGN</obj_property>
+         <obj_property name="ObjectShortName">MEM_SIGN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_DOUT1" type="array">
+         <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/MEM_DOUT2" type="array">
+         <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/memValid1" type="logic">
+         <obj_property name="ElementShortName">memValid1</obj_property>
+         <obj_property name="ObjectShortName">memValid1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/wordAddr1" type="array">
+         <obj_property name="ElementShortName">wordAddr1[13:0]</obj_property>
+         <obj_property name="ObjectShortName">wordAddr1[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/wordAddr2" type="array">
+         <obj_property name="ElementShortName">wordAddr2[13:0]</obj_property>
+         <obj_property name="ObjectShortName">wordAddr2[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/memReadWord" type="array">
+         <obj_property name="ElementShortName">memReadWord[31:0]</obj_property>
+         <obj_property name="ObjectShortName">memReadWord[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/memReadSized" type="array">
+         <obj_property name="ElementShortName">memReadSized[31:0]</obj_property>
+         <obj_property name="ObjectShortName">memReadSized[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/_MEM_DOUT1" type="array">
+         <obj_property name="ElementShortName">_MEM_DOUT1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">_MEM_DOUT1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/byteOffset" type="array">
+         <obj_property name="ElementShortName">byteOffset[1:0]</obj_property>
+         <obj_property name="ObjectShortName">byteOffset[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/main_memory/weAddrValid" type="logic">
+         <obj_property name="ElementShortName">weAddrValid</obj_property>
+         <obj_property name="ObjectShortName">weAddrValid</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/lru_bits" type="array">
-      <obj_property name="ElementShortName">lru_bits[31:0]</obj_property>
-      <obj_property name="ObjectShortName">lru_bits[31:0]</obj_property>
+   <wvobject type="divider" fp_name="divider3800">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/cache_tb/DUT/line_buffer" type="array">
-      <obj_property name="ElementShortName">line_buffer[255:0]</obj_property>
-      <obj_property name="ObjectShortName">line_buffer[255:0]</obj_property>
+   <wvobject fp_name="group3801" type="group">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/re_imem" type="logic">
+         <obj_property name="ElementShortName">re_imem</obj_property>
+         <obj_property name="ObjectShortName">re_imem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/hit_imem" type="logic">
+         <obj_property name="ElementShortName">hit_imem</obj_property>
+         <obj_property name="ObjectShortName">hit_imem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/full_cl" type="logic">
+         <obj_property name="ElementShortName">full_cl</obj_property>
+         <obj_property name="ObjectShortName">full_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/mem_valid_mm" type="logic">
+         <obj_property name="ElementShortName">mem_valid_mm</obj_property>
+         <obj_property name="ObjectShortName">mem_valid_mm</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/clr" type="logic">
+         <obj_property name="ElementShortName">clr</obj_property>
+         <obj_property name="ObjectShortName">clr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/we_imem" type="logic">
+         <obj_property name="ElementShortName">we_imem</obj_property>
+         <obj_property name="ObjectShortName">we_imem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/we_cl" type="logic">
+         <obj_property name="ElementShortName">we_cl</obj_property>
+         <obj_property name="ObjectShortName">we_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/next_cl" type="logic">
+         <obj_property name="ElementShortName">next_cl</obj_property>
+         <obj_property name="ObjectShortName">next_cl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/re_mm" type="logic">
+         <obj_property name="ElementShortName">re_mm</obj_property>
+         <obj_property name="ObjectShortName">re_mm</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/state" type="array">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cache_tb/DUT/cache_controller/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

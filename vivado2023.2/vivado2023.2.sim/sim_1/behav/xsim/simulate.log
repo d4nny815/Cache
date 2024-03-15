@@ -1,13 +1,120 @@
 Time resolution is 1 ps
 Starting test...
-Writing ffffffff to 00000000
-Writing fffffffe to 00000001
-Writing fffffffd to 00000002
-Writing fffffffc to 00000003
-Writing fffffffb to 00000004
-Writing fffffffa to 00000005
-Writing fffffff9 to 00000006
-Writing fffffff8 to 00000007
-Error: CacheLineAdapter is not full
-Test finished
-$finish called at time : 365 ns : File "C:/Users/D4nny/Documents/HDL/cache/verification/test_clAdapter.sv" Line 73
+DEV: Writing D:03200513 to A:0000 with T:  0, SI: 0, WO:0
+DEV: Writing to set0
+DEV: Writing D:00100593 to A:0001 with T:  0, SI: 0, WO:1
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0002 with T:  0, SI: 0, WO:2
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0003 with T:  0, SI: 0, WO:3
+DEV: Writing to set0
+DEV: Writing D:01900293 to A:0004 with T:  0, SI: 0, WO:4
+DEV: Writing to set0
+DEV: Writing D:00000613 to A:0005 with T:  0, SI: 0, WO:5
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0006 with T:  0, SI: 0, WO:6
+DEV: Writing to set0
+DEV: Writing D:00528633 to A:0007 with T:  0, SI: 0, WO:7
+DEV: Writing to set0
+Read 00528633 from 0004
+Read 00100593 from 0008
+Read 00000013 from 000c
+Read 00000013 from 0010
+Read 01900293 from 0014
+Read 00000613 from 0018
+Read 00000013 from 001c
+Read 00528633 from 0020
+DEV: Writing D:00000013 to A:0008 with T:  0, SI: 1, WO:0
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0009 with T:  0, SI: 1, WO:1
+DEV: Writing to set0
+DEV: Writing D:46c51863 to A:000a with T:  0, SI: 1, WO:2
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:000b with T:  0, SI: 1, WO:3
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:000c with T:  0, SI: 1, WO:4
+DEV: Writing to set0
+DEV: Writing D:04b00613 to A:000d with T:  0, SI: 1, WO:5
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:000e with T:  0, SI: 1, WO:6
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:000f with T:  0, SI: 1, WO:7
+DEV: Writing to set0
+Read 00000013 from 0024
+Read 00000013 from 0028
+Read 46c51863 from 002c
+Read 00000013 from 0030
+Read 00000013 from 0034
+Read 04b00613 from 0038
+Read 00000013 from 003c
+Read 00000013 from 0040
+DEV: Writing D:40560633 to A:0010 with T:  0, SI: 2, WO:0
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0011 with T:  0, SI: 2, WO:1
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0012 with T:  0, SI: 2, WO:2
+DEV: Writing to set0
+DEV: Writing D:44c51663 to A:0013 with T:  0, SI: 2, WO:3
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0014 with T:  0, SI: 2, WO:4
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0015 with T:  0, SI: 2, WO:5
+DEV: Writing to set0
+DEV: Writing D:00b29633 to A:0016 with T:  0, SI: 2, WO:6
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0017 with T:  0, SI: 2, WO:7
+DEV: Writing to set0
+Read 00000013 from 0044
+Read 00000013 from 0048
+Read 00000013 from 004c
+Read 44c51663 from 0050
+Read 00000013 from 0054
+Read 00000013 from 0058
+Read 00b29633 from 005c
+Read 00000013 from 0060
+DEV: Writing D:00000013 to A:0018 with T:  0, SI: 3, WO:0
+DEV: Writing to set0
+DEV: Writing D:42c51a63 to A:0019 with T:  0, SI: 3, WO:1
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:001a with T:  0, SI: 3, WO:2
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:001b with T:  0, SI: 3, WO:3
+DEV: Writing to set0
+DEV: Writing D:00a2a633 to A:001c with T:  0, SI: 3, WO:4
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:001d with T:  0, SI: 3, WO:5
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:001e with T:  0, SI: 3, WO:6
+DEV: Writing to set0
+DEV: Writing D:40060e63 to A:001f with T:  0, SI: 3, WO:7
+DEV: Writing to set0
+Read 40060e63 from 0064
+Read 42c51a63 from 0068
+Read 00000013 from 006c
+Read 00000013 from 0070
+Read 00a2a633 from 0074
+Read 00000013 from 0078
+Read 00000013 from 007c
+Read 40060e63 from 0080
+DEV: Writing D:00000013 to A:0020 with T:  0, SI: 4, WO:0
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0021 with T:  0, SI: 4, WO:1
+DEV: Writing to set0
+DEV: Writing D:fb500293 to A:0022 with T:  0, SI: 4, WO:2
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0023 with T:  0, SI: 4, WO:3
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0024 with T:  0, SI: 4, WO:4
+DEV: Writing to set0
+DEV: Writing D:00a2b633 to A:0025 with T:  0, SI: 4, WO:5
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0026 with T:  0, SI: 4, WO:6
+DEV: Writing to set0
+DEV: Writing D:00000013 to A:0027 with T:  0, SI: 4, WO:7
+DEV: Writing to set0
+Read 00000013 from 0084
+Read 00000013 from 0088
+Read fb500293 from 008c
+Read 00000013 from 0090
+Read 00000013 from 0094
+Read 00

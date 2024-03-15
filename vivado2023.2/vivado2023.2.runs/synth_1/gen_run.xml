@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710468024">
-  <File Type="PA-TCL" Name="InstrL1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="InstrL1_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="InstrL1_reports.tcl"/>
-  <File Type="RDS-RDS" Name="InstrL1.vds"/>
-  <File Type="RDS-UTIL" Name="InstrL1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="InstrL1_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="InstrL1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="InstrL1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="InstrL1_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710540815" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
+  <File Type="PA-TCL" Name="Memory.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Memory_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Memory_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Memory.vds"/>
+  <File Type="RDS-UTIL" Name="Memory_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Memory_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Memory.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Memory_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Memory_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../rtl/CacheLineAdapter.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../rtl/InstructionL1.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/MainMemory.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/cacheController.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/clk_div.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,15 +48,20 @@
     </File>
     <File Path="$PPRDIR/../rtl/Memory.sv">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../rtl/otter_memory.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="InstrL1"/>
+      <Option Name="TopModule" Val="Memory"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -40,6 +73,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

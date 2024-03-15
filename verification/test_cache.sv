@@ -8,65 +8,64 @@ module cache_tb ();
 
     default clocking tb_clk @(posedge clk); endclocking
 
+
+
     logic we = 0;
     logic reset = 0;
-    logic [13:0] addr = 0;
-    logic [31:0] data = 0;
+    logic read_en = 0;
+    logic [15:0] addr = 0;
     logic [31:0] dout;
+    logic memValid;
 
-
-    InstrL1 DUT (
-        .clk            (clk),
-        .reset          (reset),
-        .we             (we),
-        .addr           (addr),
-        .data           (data),
-        .dout           (dout),
-        .hit            ()
+    Memory #(.DELAY_BITS(3)) DUT (
+        .MEM_CLK        (clk),
+        .RST            (reset),
+        .MEM_RDEN1      (read_en),        
+        .MEM_RDEN2      (),        
+        .MEM_WE2        (),        
+        .MEM_ADDR1      (addr[15:2]),        
+        .MEM_ADDR2      (),        
+        .MEM_DIN2       (),        
+        .MEM_SIZE       (),        
+        .MEM_SIGN       (),        
+        .MEM_DOUT1      (dout),        
+        .MEM_DOUT2      (),        
+        .memValid1      (memValid)
     );
 
-    task reset_l1();
+
+    task reset_cache();
         reset = 1;
         ##(2);
         reset = 0;
-    endtask : reset_l1
+    endtask : reset_cache
 
+    task read_addr(logic [13:0] addr_i);
+        addr = addr_i;
+        read_en = 1;
+        @(posedge memValid);
+    endtask : read_addr
 
-    task fill_lines();
-        int k;
-        for (int i = 0; i < 2 * 32 * 8; i++) begin
-            we = 1;
+    task read();
+        for (int i = 0; i < 8; i++) begin
+            read_addr(addr);
             for (int j = 0; j < 8; j++) begin
-                k = i * 377;
-                addr = {k[8:0], j[4:0]};
-                data = 32'hffff_ffff - (i + 1) * j;
+                read_en = 1;
+                addr += 4;
+                $display("Read %x from %x", dout, addr);
                 @(posedge clk);
-                // $display("TB: Writing %x to %x with %d, %d, %d", data, addr, i, j, k);
             end
         end
-        data = 32'hdead_beef;
-        we = 0;
-    endtask : fill_lines
 
-    task check_lines();
-        for (int i = 0; i < 32; i++) begin
-            addr = i;
-            assert (dout == 32'hffff_ffff - i) 
-            else   $display("Error: Expected %x, got %x @ addr: %x", 32'hffff_ffff - i , dout, addr);
-            @(posedge clk);
-        end
-    endtask : check_lines
+        read_en = 0;
+        addr = 32'hdead_beef;
+    endtask : read
 
     initial begin
-        reset_l1();
+        reset_cache();
 
         $display("Starting test...");
-        fill_lines();
-
-        ##(3);
-        $display("Checking lines...");
-        // check_lines();
-
+        read();
 
         ##(3);
         $display("Test finished");

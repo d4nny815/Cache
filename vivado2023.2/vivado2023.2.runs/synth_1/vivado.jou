@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Mar 14 19:00:26 2024
-# Process ID: 23504
+# Start of session at: Fri Mar 15 15:13:37 2024
+# Process ID: 25668
 # Current directory: C:/Users/D4nny/Documents/HDL/cache/vivado2023.2/vivado2023.2.runs/synth_1
-# Command line: vivado.exe -log InstrL1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source InstrL1.tcl
-# Log file: C:/Users/D4nny/Documents/HDL/cache/vivado2023.2/vivado2023.2.runs/synth_1/InstrL1.vds
+# Command line: vivado.exe -log Memory.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Memory.tcl
+# Log file: C:/Users/D4nny/Documents/HDL/cache/vivado2023.2/vivado2023.2.runs/synth_1/Memory.vds
 # Journal file: C:/Users/D4nny/Documents/HDL/cache/vivado2023.2/vivado2023.2.runs/synth_1\vivado.jou
 # Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
 #-----------------------------------------------------------
-source InstrL1.tcl -notrace
+source Memory.tcl -notrace

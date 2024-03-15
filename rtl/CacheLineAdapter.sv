@@ -17,7 +17,7 @@ module CacheLineAdapter (
 
     // addr_gen
     logic [LINE_BITS - 1:0] counter;
-    always_ff @(negedge clk) begin
+    always_ff @(posedge clk) begin
         if (clr == 1) begin
             counter <= 0;
         end
@@ -30,11 +30,11 @@ module CacheLineAdapter (
 
     always_comb begin
         full = (counter == WORDS_PER_LINE - 1);
-        addr_o = {addr_i[31: LINE_BITS + BYTE_BITS], 5'd0} + counter << BYTE_BITS;
+        addr_o = {addr_i[31: LINE_BITS + BYTE_BITS], 5'd0} + (counter << BYTE_BITS);
         data_o = line_buffer[counter]; 
     end
 
-    always_ff @(negedge clk) begin
+    always_ff @(posedge clk) begin
         if (we == 1) 
             line_buffer[counter] <= data_i;
     end

@@ -1,3 +1,23 @@
+// instanciate this module in the top level module
+/*
+    
+CacheController cacheController (
+    .clk            (clk),
+    .reset          (reset),
+    .re_imem        (re_imem),
+    .hit_imem       (hit_imem),
+    .full_cl        (full_cl),
+    .mem_valid_mm   (mem_valid_mm),
+    .clr            (clr),
+    .we_imem        (we_imem),
+    .we_cl          (we_cl),
+    .next_cl        (next_cl),
+    .re_mm          (re_mm)
+);
+
+*/
+
+
 module CacheController (
     input logic clk,
     input logic reset,
@@ -11,7 +31,9 @@ module CacheController (
     input logic mem_valid_mm,
     
     // * OUTPUTS
-    output clr,
+    output logic clr,
+    output logic memValid1,
+
     output logic we_imem,
     
     output logic we_cl,
@@ -39,7 +61,8 @@ module CacheController (
     end
 
     always_comb begin
-        clr = 1'b0; we_imem = 1'b0; we_cl = 1'b0; next_cl = 1'b0; re_mm = 1'b0;
+        clr = 1'b0; we_imem = 1'b0; we_cl = 1'b0; next_cl = 1'b0; re_mm = 1'b0; 
+        memValid1 = 1'b0;
 
         case (state)
             INIT: begin
@@ -49,8 +72,10 @@ module CacheController (
 
             CHECK_L1: begin
                 if (re_imem == 1) begin
-                    if (hit_imem == 1)
+                    if (hit_imem == 1) begin
+                        memValid1 = 1;
                         next_state = CHECK_L1;
+                    end 
                     else
                         next_state = FETCH_IMEM;
                 end
@@ -59,18 +84,23 @@ module CacheController (
             end
 
             FETCH_IMEM: begin
-                if (full_cl == 1)
+                re_mm = 1;
+                we_cl = mem_valid_mm;
+                next_cl = mem_valid_mm;
+                if (full_cl & mem_valid_mm) begin
                     next_state = FILL_IMEM;
-                else
-                    next_cl = mem_valid_mm;
+                end
+                else begin
                     next_state = FETCH_IMEM;
+                end
             end
 
             FILL_IMEM: begin
+                we_imem = 1;
+                next_cl = 1;
                 if (full_cl == 1)
                     next_state = CHECK_L1;
                 else
-                    we_imem = 1;
                     next_state = FILL_IMEM;
             end
 

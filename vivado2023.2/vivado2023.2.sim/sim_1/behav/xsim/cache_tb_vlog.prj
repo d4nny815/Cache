@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../rtl/CacheLineAdapter.sv" \
+"../../../../../rtl/InstructionL1.sv" \
+"../../../../../rtl/MainMemory.sv" \
+"../../../../../rtl/Memory.sv" \
+"../../../../../rtl/cacheController.sv" \
+"../../../../../rtl/clk_div.sv" \
+"../../../../../verification/test_cache.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
