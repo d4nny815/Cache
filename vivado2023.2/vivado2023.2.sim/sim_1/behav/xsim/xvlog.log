@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/cache/verification/test_clAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cl_tb
+WARNING: [VRFC 10-3824] variable 's_clk' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/cache/verification/test_clAdapter.sv:41]
+WARNING: [VRFC 10-3824] variable 'i' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/cache/verification/test_clAdapter.sv:42]

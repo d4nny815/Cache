@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+Starting test...
+Writing ffffffff to 00000000
+Writing fffffffe to 00000001
+Writing fffffffd to 00000002
+Writing fffffffc to 00000003
+Writing fffffffb to 00000004
+Writing fffffffa to 00000005
+Writing fffffff9 to 00000006
+Writing fffffff8 to 00000007
+Error: CacheLineAdapter is not full
+Test finished
+$finish called at time : 365 ns : File "C:/Users/D4nny/Documents/HDL/cache/verification/test_clAdapter.sv" Line 73
