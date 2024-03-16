@@ -76,7 +76,7 @@ module InstrL1 (
                     valid1[i] <= 0;
                     lru_bits[i] <= 0;
                 end
-                end
+            end
             else
     
             if (we) begin

@@ -5102,3 +5102,25 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 679, 235); // b (RDIRe
 // TclEventType: FILE_SET_CHANGE
 // Elapsed Time for: 'L.f': 55m:03s
 // Elapsed Time for: 'L.f': 55m:05s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 57m:21s
+// Elapsed Time for: 'L.f': 57m:23s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:04m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:04m:57s
+// Elapsed Time for: 'L.f': 01h:04m:59s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:05m:01s
+// Elapsed Time for: 'L.f': 01h:05m:03s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:05m:39s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01h:05m:41s
+// Elapsed Time for: 'L.f': 01h:05m:43s
