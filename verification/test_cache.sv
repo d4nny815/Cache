@@ -37,7 +37,7 @@ module cache_tb ();
     (* ram_decomp = "power" *) logic [31:0] expected_memory [0:16383];
     
     initial begin
-        $readmemh("otter_memory.mem", expected_memory, 0, 16383);
+        $readmemh("otter_mem.mem", expected_memory, 0, 16383);
     end
 
     task reset_cache();
@@ -46,54 +46,51 @@ module cache_tb ();
         reset = 0;
     endtask : reset_cache
 
-    task read_addr(logic [13:0] addr_i);
-        addr = addr_i;
+    task read_addr(logic [10:0] base_addr, logic [2:0] word_offset);
+        addr = {base_addr, word_offset, 2'b0};
         read_en = 1;
-        @(posedge memValid);
+        @(posedge clk iff memValid);
+        read_en = 0;
     endtask : read_addr
 
-    task test_cache();
-        int SETS = 2;
-        int TOTAL_LINES = 32;
+    task read_lines();
+        int TEST_RUNS = 50;
         int WORDS_IN_LINE = 8;
-        int SET_SIZE = WORDS_IN_LINE * TOTAL_LINES;
-        
-        int start_addr, end_addr;
 
-        for (int fills = 0; fills < 4; fills++) begin
-            start_addr = fills * SET_SIZE * SETS;
-            end_addr = (fills + 1) * SET_SIZE * SETS;
-            for (int i = start_addr / WORDS_IN_LINE; i < end_addr / WORDS_IN_LINE; i++) begin
-                addr = i * 4 * 8;
-                read_addr(addr);
-                for (int j = 0; j < WORDS_IN_LINE; j++) begin
-                    read_en = 1;
-                    @(posedge clk);
-                    addr += 4;
-                end
+        logic [10:0] word_addr;
+        for (int i=0; i<TEST_RUNS; i++) begin
+            word_addr = $random;
+            for (int word_offset = 0; word_offset < WORDS_IN_LINE; word_offset++) begin
+                read_addr(word_addr, word_offset[2:0]);
+                assert (dout == expected_memory[addr / 4]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[addr / 4], dout);
             end
-
-            read_en = 0;
-            ##(2);
-            
-            for (int i = start_addr; i < end_addr ; i++) begin
-                read_en = 1;
-                addr = i * 4;
-                @(posedge clk);
-                assert (dout == expected_memory[i]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[i], dout);
-            end
-            ##(2);
         end
 
         read_en = 0;
-        addr = 32'hdead_beef;
-    endtask : test_cache
+        addr = 16'hbeef;
+    endtask : read_lines
+
+    task read_random_addr();
+        int TEST_RUNS = 100;
+        for (int i=0; i<TEST_RUNS; i++) begin
+            read_addr($random, $random % 8);
+            read_en = 1;
+            @(posedge clk iff memValid);
+            assert (dout == expected_memory[addr / 4]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[addr / 4], dout);
+        end
+        read_en = 0;
+        addr = 16'hbeef;
+    endtask : read_random_addr
 
     initial begin
         reset_cache();
 
         $display("Starting test...");
-        test_cache();
+        read_lines();
+
+        ##(3);
+        $display("random addr test");
+        read_random_addr();
 
         ##(3);
         $display("Test finished");
