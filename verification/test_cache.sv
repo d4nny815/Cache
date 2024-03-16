@@ -54,7 +54,7 @@ module cache_tb ();
     endtask : read_addr
 
     task read_lines();
-        int TEST_RUNS = 50;
+        int TEST_RUNS = 100;
         int WORDS_IN_LINE = 8;
 
         logic [10:0] word_addr;
@@ -74,23 +74,40 @@ module cache_tb ();
         int TEST_RUNS = 100;
         for (int i=0; i<TEST_RUNS; i++) begin
             read_addr($random, $random % 8);
-            read_en = 1;
-            @(posedge clk iff memValid);
             assert (dout == expected_memory[addr / 4]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[addr / 4], dout);
         end
         read_en = 0;
         addr = 16'hbeef;
     endtask : read_random_addr
 
+    task read_entire_Imem();
+        int addr_lines = 14;
+        for (int i=0; i < 2 ** addr_lines; i++) begin
+            addr = i << 2;
+            read_en = 1;
+            @(posedge clk iff memValid);
+            assert (dout == expected_memory[i]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[i], dout);
+        end
+        
+        read_en = 0;
+        addr = 16'hbeef;
+    endtask : read_entire_Imem
+
+
     initial begin
         reset_cache();
-
         $display("Starting test...");
+
         read_lines();
+        $display("line by line read test passed");
 
         ##(3);
-        $display("random addr test");
         read_random_addr();
+        $display("random addr test passed");
+
+        ##(3);
+        read_entire_Imem();
+        $display("Entire Imem read test passed");
 
         ##(3);
         $display("Test finished");
