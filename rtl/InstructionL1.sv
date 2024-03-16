@@ -80,9 +80,9 @@ module InstrL1 (
             else
     
             if (we) begin
-                $display("DEV: Writing D:%x to A:%x with T:%d, SI:%d, WO:%d", data, addr, tag, set_index, word_offset);
+                // $display("DEV: Writing D:%x to A:%x with T:%d, SI:%d, WO:%d", data, addr, tag, set_index, word_offset);
                 if (lru_bits[set_index] == 0) begin
-                    $display("DEV: Writing to set0");
+                    // $display("DEV: Writing to set0");
                     valid0[set_index] <= 1;                
                     tag0[set_index] <= tag;
     
@@ -102,7 +102,7 @@ module InstrL1 (
                 end
                 
                 else begin
-                    $display("DEV: Writing to set1");
+                    // $display("DEV: Writing to set1");
                     valid1[set_index] <= 1;
                     tag1[set_index] <= tag;
     

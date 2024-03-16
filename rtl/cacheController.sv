@@ -39,7 +39,8 @@ module CacheController (
     output logic we_cl,
     output logic next_cl,
 
-    output logic re_mm
+    output logic re_mm,
+    output logic reset_mm
     );
 
     typedef enum logic [2:0] {
@@ -62,7 +63,7 @@ module CacheController (
 
     always_comb begin
         clr = 1'b0; we_imem = 1'b0; we_cl = 1'b0; next_cl = 1'b0; re_mm = 1'b0; 
-        memValid1 = 1'b0;
+        memValid1 = 1'b0; reset_mm = 1'b0;
 
         case (state)
             INIT: begin
@@ -76,8 +77,10 @@ module CacheController (
                         memValid1 = 1;
                         next_state = CHECK_L1;
                     end 
-                    else
+                    else begin
                         next_state = FETCH_IMEM;
+                        reset_mm = 1;
+                    end
                 end
                 else
                     next_state = CHECK_L1;
@@ -88,6 +91,7 @@ module CacheController (
                 we_cl = mem_valid_mm;
                 next_cl = mem_valid_mm;
                 if (full_cl & mem_valid_mm) begin
+                    reset_mm = 1;
                     next_state = FILL_IMEM;
                 end
                 else begin
@@ -98,8 +102,9 @@ module CacheController (
             FILL_IMEM: begin
                 we_imem = 1;
                 next_cl = 1;
-                if (full_cl == 1)
+                if (full_cl == 1) begin
                     next_state = CHECK_L1;
+                end
                 else
                     next_state = FILL_IMEM;
             end

@@ -33,6 +33,12 @@ module cache_tb ();
         .memValid1      (memValid)
     );
 
+    (* rom_style="{distributed | block}" *)
+    (* ram_decomp = "power" *) logic [31:0] expected_memory [0:16383];
+    
+    initial begin
+        $readmemh("otter_memory.mem", expected_memory, 0, 16383);
+    end
 
     task reset_cache();
         reset = 1;
@@ -46,26 +52,48 @@ module cache_tb ();
         @(posedge memValid);
     endtask : read_addr
 
-    task read();
-        for (int i = 0; i < 8; i++) begin
-            read_addr(addr);
-            for (int j = 0; j < 8; j++) begin
-                read_en = 1;
-                addr += 4;
-                $display("Read %x from %x", dout, addr);
-                @(posedge clk);
+    task test_cache();
+        int SETS = 2;
+        int TOTAL_LINES = 32;
+        int WORDS_IN_LINE = 8;
+        int SET_SIZE = WORDS_IN_LINE * TOTAL_LINES;
+        
+        int start_addr, end_addr;
+
+        for (int fills = 0; fills < 4; fills++) begin
+            start_addr = fills * SET_SIZE * SETS;
+            end_addr = (fills + 1) * SET_SIZE * SETS;
+            for (int i = start_addr / WORDS_IN_LINE; i < end_addr / WORDS_IN_LINE; i++) begin
+                addr = i * 4 * 8;
+                read_addr(addr);
+                for (int j = 0; j < WORDS_IN_LINE; j++) begin
+                    read_en = 1;
+                    @(posedge clk);
+                    addr += 4;
+                end
             end
+
+            read_en = 0;
+            ##(2);
+            
+            for (int i = start_addr; i < end_addr ; i++) begin
+                read_en = 1;
+                addr = i * 4;
+                @(posedge clk);
+                assert (dout == expected_memory[i]) else $fatal("Memory read error at addr %x, expected %x, got %x", addr, expected_memory[i], dout);
+            end
+            ##(2);
         end
 
         read_en = 0;
         addr = 32'hdead_beef;
-    endtask : read
+    endtask : test_cache
 
     initial begin
         reset_cache();
 
         $display("Starting test...");
-        read();
+        test_cache();
 
         ##(3);
         $display("Test finished");

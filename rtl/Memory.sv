@@ -50,7 +50,7 @@ module Memory #(
 
 
     // control logic
-    logic we_imem, we_cl, next_cl, re_mm, re_imem, hit;
+    logic we_imem, we_cl, next_cl, re_mm, re_imem, hit, reset_mm;
 
 
     InstrL1 instr_mem (
@@ -81,7 +81,7 @@ module Memory #(
 
     MainMemory #(.DELAY_BITS(3)) main_memory (
         .MEM_CLK        (MEM_CLK),
-        .RST            (clr),
+        .RST            (clr | reset_mm),
         .MEM_RDEN1      (re_mm),        // read enable Instruction
         .MEM_RDEN2      (0),            // read enable data
         .MEM_WE2        (0),            // write enable.
@@ -107,7 +107,8 @@ module Memory #(
         .we_imem        (we_imem),
         .we_cl          (we_cl),
         .next_cl        (next_cl),
-        .re_mm          (re_mm)
+        .re_mm          (re_mm),
+        .reset_mm       (reset_mm)
     );
 
     always_comb begin
