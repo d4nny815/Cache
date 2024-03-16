@@ -54,7 +54,12 @@ module Memory #(
     logic we_imem, we_cl, next_cl, re_mm, re_imem, hit, reset_mm;
 
 
-    InstrL1 instr_mem (
+    InstrL1 #(
+        .ADDR_SIZE(14), 
+        .WORD_SIZE(32),
+        .LINES_PER_SET(32),
+        .WORDS_PER_LINE(8)
+        ) instr_mem (
         .clk            (MEM_CLK),
         .reset          (clr),
         .we             (we_imem),
@@ -64,9 +69,6 @@ module Memory #(
         .hit            (imem_hit)
     );
 
-    // always_comb begin
-    //     line_in_buffer = 
-    // end
 
     CacheLineAdapter cache_line_adapter (
         .clk            (MEM_CLK),
@@ -89,8 +91,6 @@ module Memory #(
         .MEM_ADDR1      (line_addr[15:2]),    // Instruction Memory word Addr (Connect to PC[15:2])
         .MEM_ADDR2      (0),            // Data Memory Addr
         .MEM_DIN2       (0),            // Data to save
-        .MEM_SIZE       (0),            // 0-Byte, 1-Half, 2-Word
-        .MEM_SIGN       (0),            // 1-unsigned 0-signed
         .MEM_DOUT1      (instr),        // Instruction
         .MEM_DOUT2      (),             // Data
         .memValid1      (mem_valid_mm)
@@ -115,8 +115,5 @@ module Memory #(
     always_comb begin
         MEM_DOUT1 = imem_hit ? instr_data : 32'hdead_beef;
     end
-
-
-
 
 endmodule

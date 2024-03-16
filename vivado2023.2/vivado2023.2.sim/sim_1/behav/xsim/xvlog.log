@@ -1,16 +1,18 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CacheLineAdapter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstrL1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MainMemory
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Memory
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CacheController
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/clk_div.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/clk_div.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_2n_div
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:57]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:58]
+WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:57]
+WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:58]
+WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:74]
+WARNING: [VRFC 10-3824] variable 'addr_lines' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:84]
