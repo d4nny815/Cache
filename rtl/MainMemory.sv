@@ -7,7 +7,7 @@ module MainMemory #(
     input MEM_RDEN2,                // read enable data
     input MEM_WE2,                  // write enable.
     input [13:0] MEM_ADDR1,         // Instruction Memory word Addr (Connect to PC[15:2])
-    input [31:0] MEM_ADDR2,         // Data Memory Addr
+    input [29:0] MEM_ADDR2,         // Data Memory Addr
     input [31:0] MEM_DIN2,          // Data to save
     output logic [31:0] MEM_DOUT1,  // Instruction
     output logic [31:0] MEM_DOUT2,  // Data
@@ -36,7 +36,6 @@ module MainMemory #(
             memory[MEM_ADDR2] <= MEM_DIN2;
         if(MEM_RDEN2)                         // Read word from memory
             _MEM_DOUT2 <= memory[MEM_ADDR2];
-
         if(MEM_RDEN1)                         // Read word from memory
             _MEM_DOUT1 <= memory[MEM_ADDR1];
     end

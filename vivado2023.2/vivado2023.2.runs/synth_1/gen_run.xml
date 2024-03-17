@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710609350" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710707309" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
   <File Type="RDS-RDS" Name="Memory.vds"/>
   <File Type="REPORTS-TCL" Name="Memory_reports.tcl"/>
   <File Type="PA-TCL" Name="Memory.tcl"/>
@@ -9,6 +9,13 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../rtl/CacheLineAdapter.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../rtl/DataL1.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

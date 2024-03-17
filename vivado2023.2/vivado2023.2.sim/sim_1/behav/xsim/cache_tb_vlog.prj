@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
 "../../../../../rtl/CacheLineAdapter.sv" \
+"../../../../../rtl/DataL1.sv" \
 "../../../../../rtl/InstructionL1.sv" \
 "../../../../../rtl/MainMemory.sv" \
 "../../../../../rtl/Memory.sv" \
