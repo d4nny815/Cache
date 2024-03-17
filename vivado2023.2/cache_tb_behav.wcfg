@@ -11,50 +11,66 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="897.850 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,000.751 ns"></ZoomEndTime>
-      <Cursor1Time time="925.000 ns"></Cursor1Time>
+      <ZoomStartTime time="14,087.583 ns"></ZoomStartTime>
+      <ZoomEndTime time="14,198.484 ns"></ZoomEndTime>
+      <Cursor1Time time="14,180.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="160"></NameColumnWidth>
+      <NameColumnWidth column_width="156"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
-   <wave_markers>
-      <marker label="" time="755000" />
-   </wave_markers>
+   <WVObjectSize size="24" />
    <wvobject type="logic" fp_name="/cache_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/cache_tb/we">
-      <obj_property name="ElementShortName">we</obj_property>
-      <obj_property name="ObjectShortName">we</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/cache_tb/reset">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/cache_tb/read_en">
-      <obj_property name="ElementShortName">read_en</obj_property>
-      <obj_property name="ObjectShortName">read_en</obj_property>
+   <wvobject type="logic" fp_name="/cache_tb/we1">
+      <obj_property name="ElementShortName">we1</obj_property>
+      <obj_property name="ObjectShortName">we1</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/cache_tb/addr">
-      <obj_property name="ElementShortName">addr[15:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject type="logic" fp_name="/cache_tb/read_en1">
+      <obj_property name="ElementShortName">read_en1</obj_property>
+      <obj_property name="ObjectShortName">read_en1</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/cache_tb/dout">
-      <obj_property name="ElementShortName">dout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+   <wvobject type="array" fp_name="/cache_tb/addr1">
+      <obj_property name="ElementShortName">addr1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1[15:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/cache_tb/memValid">
-      <obj_property name="ElementShortName">memValid</obj_property>
-      <obj_property name="ObjectShortName">memValid</obj_property>
+   <wvobject type="array" fp_name="/cache_tb/dout1">
+      <obj_property name="ElementShortName">dout1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout1[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/cache_tb/DUT/cache_controller/state">
-      <obj_property name="ElementShortName">state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   <wvobject type="logic" fp_name="/cache_tb/memValid1">
+      <obj_property name="ElementShortName">memValid1</obj_property>
+      <obj_property name="ObjectShortName">memValid1</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/cache_tb/din2">
+      <obj_property name="ElementShortName">din2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/cache_tb/dout2">
+      <obj_property name="ElementShortName">dout2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/cache_tb/addr2">
+      <obj_property name="ElementShortName">addr2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/cache_tb/read_en2">
+      <obj_property name="ElementShortName">read_en2</obj_property>
+      <obj_property name="ObjectShortName">read_en2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/cache_tb/we2">
+      <obj_property name="ElementShortName">we2</obj_property>
+      <obj_property name="ObjectShortName">we2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/cache_tb/memValid2">
+      <obj_property name="ElementShortName">memValid2</obj_property>
+      <obj_property name="ObjectShortName">memValid2</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/cache_tb/DUT/cache_controller/next_state">
       <obj_property name="ElementShortName">next_state[2:0]</obj_property>
@@ -114,6 +130,10 @@
       <wvobject type="array" fp_name="/cache_tb/DUT/MEM_DOUT2">
          <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
          <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/cache_tb/DUT/mem_addr_valid1">
+         <obj_property name="ElementShortName">mem_addr_valid1</obj_property>
+         <obj_property name="ObjectShortName">mem_addr_valid1</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/cache_tb/DUT/memValid1">
          <obj_property name="ElementShortName">memValid1</obj_property>
@@ -215,6 +235,11 @@
       <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/addr">
          <obj_property name="ElementShortName">addr[13:0]</obj_property>
          <obj_property name="ObjectShortName">addr[13:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/addr">
+         <obj_property name="ElementShortName">addr[13:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[13:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/data">
          <obj_property name="ElementShortName">data[31:0]</obj_property>
@@ -227,6 +252,14 @@
       <wvobject type="logic" fp_name="/cache_tb/DUT/instr_mem/hit">
          <obj_property name="ElementShortName">hit</obj_property>
          <obj_property name="ObjectShortName">hit</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/cache_tb/DUT/instr_mem/hit0">
+         <obj_property name="ElementShortName">hit0</obj_property>
+         <obj_property name="ObjectShortName">hit0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/cache_tb/DUT/instr_mem/hit1">
+         <obj_property name="ElementShortName">hit1</obj_property>
+         <obj_property name="ObjectShortName">hit1</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/set0">
          <obj_property name="ElementShortName">set0[31:0][255:0]</obj_property>
@@ -267,6 +300,7 @@
       <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/set_index">
          <obj_property name="ElementShortName">set_index[4:0]</obj_property>
          <obj_property name="ObjectShortName">set_index[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/cache_tb/DUT/instr_mem/tag">
          <obj_property name="ElementShortName">tag[6:0]</obj_property>

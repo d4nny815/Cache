@@ -3,14 +3,14 @@ module MainMemory #(
     ) (
     input MEM_CLK,
     input RST,
-    input MEM_RDEN1,        // read enable Instruction
-    input MEM_RDEN2,        // read enable data
-    input MEM_WE2,          // write enable.
-    input [13:0] MEM_ADDR1, // Instruction Memory word Addr (Connect to PC[15:2])
-    input [31:0] MEM_ADDR2, // Data Memory Addr
-    input [31:0] MEM_DIN2,  // Data to save
+    input MEM_RDEN1,                // read enable Instruction
+    input MEM_RDEN2,                // read enable data
+    input MEM_WE2,                  // write enable.
+    input [13:0] MEM_ADDR1,         // Instruction Memory word Addr (Connect to PC[15:2])
+    input [31:0] MEM_ADDR2,         // Data Memory Addr
+    input [31:0] MEM_DIN2,          // Data to save
     output logic [31:0] MEM_DOUT1,  // Instruction
-    output logic [31:0] MEM_DOUT2,   // Data
+    output logic [31:0] MEM_DOUT2,  // Data
     output logic memValid1
     ); 
 
@@ -41,10 +41,10 @@ module MainMemory #(
             _MEM_DOUT1 <= memory[MEM_ADDR1];
     end
         
-    // Memory Mapped IO 
     always_comb begin
         MEM_DOUT1 = memValid1 ? _MEM_DOUT1 : 32'hdeadbeef;
         MEM_DOUT2 = memValid1 ? _MEM_DOUT2 : 32'hdeadbeef;
+        
     end
         
  endmodule

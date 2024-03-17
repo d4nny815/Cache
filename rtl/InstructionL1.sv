@@ -44,9 +44,11 @@ module InstrL1 #(
     always_comb begin
         if (valid0[set_index] && tag0[set_index] == tag) begin
             hit0 = 1'b1;
+            hit1 = 1'b0;
             line_buffer = set0[set_index];
         end else if (valid1[set_index] && tag1[set_index] == tag) begin
             hit1 = 1'b1;
+            hit0 = 1'b0;
             line_buffer = set1[set_index];
         end else begin
             hit0 = 1'b0;
@@ -54,7 +56,7 @@ module InstrL1 #(
             line_buffer = -1;
         end
 
-        hit = hit0 | hit1;
+        hit = hit0 ^ hit1;
         dout = line_buffer[WORD_SIZE * (word_offset + 1) - 1 -: WORD_SIZE];
     end
     

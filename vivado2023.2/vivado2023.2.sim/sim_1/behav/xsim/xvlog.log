@@ -12,7 +12,10 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cac
 INFO: [VRFC 10-311] analyzing module clk_2n_div
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:57]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:58]
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:74]
-WARNING: [VRFC 10-3824] variable 'addr_lines' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:66]
+WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:67]
+WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:83]
+WARNING: [VRFC 10-3824] variable 'max_addr' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:95]
+WARNING: [VRFC 10-3824] variable 'max_addr' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:109]
+WARNING: [VRFC 10-3824] variable 'instr_mem_size' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:110]
+WARNING: [VRFC 10-3824] variable 'data_mem_size' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:111]

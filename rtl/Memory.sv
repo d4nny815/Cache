@@ -53,6 +53,12 @@ module Memory #(
     // control logic
     logic we_imem, we_cl, next_cl, re_mm, re_imem, hit, reset_mm;
 
+    logic mem_addr_valid1, mem_addr_valid2;
+
+    always_comb begin
+        mem_addr_valid1 = MEM_ADDR1 < (16'h6000 >> 2);
+        if (!mem_addr_valid1) $error("Invalid memory address %x", {MEM_ADDR1, 2'b0});
+    end
 
     InstrL1 #(
         .ADDR_SIZE(14), 
@@ -113,7 +119,7 @@ module Memory #(
     );
 
     always_comb begin
-        MEM_DOUT1 = imem_hit ? instr_data : 32'hdead_beef;
+        MEM_DOUT1 = imem_hit & mem_addr_valid1 ? instr_data : 32'hdead_beef;
     end
 
 endmodule

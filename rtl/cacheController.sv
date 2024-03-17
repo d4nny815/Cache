@@ -104,6 +104,7 @@ module CacheController (
                 next_cl = 1;
                 if (full_cl == 1) begin
                     next_state = CHECK_L1;
+                    reset_mm = 1;
                 end
                 else
                     next_state = FILL_IMEM;
