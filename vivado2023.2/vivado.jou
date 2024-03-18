@@ -322,3 +322,4 @@ run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
 run 5 ms
+close_sim

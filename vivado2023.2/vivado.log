@@ -8720,3 +8720,7 @@ Writeback test passed
 CC: Invalid state 0, 0, 0
 Test finished
 $finish called at time : 2591385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 304
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 12:01:53 2024...
