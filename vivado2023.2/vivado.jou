@@ -3,75 +3,322 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Mar 16 09:55:00 2024
-# Process ID: 20104
+# Start of session at: Sun Mar 17 23:01:13 2024
+# Process ID: 30268
 # Current directory: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14296 C:\Users\D4nny\Documents\HDL\Cache\vivado2023.2\vivado2023.2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10328 C:\Users\D4nny\Documents\HDL\Cache\vivado2023.2\vivado2023.2.xpr
 # Log file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado.log
 # Journal file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2\vivado.jou
 # Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.xpr
+set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
 launch_simulation
 open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
 source cache_tb.tcl
-run 200 us
-run 200 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
+run 2 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
 relaunch_sim
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
 relaunch_sim
 relaunch_sim
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
-add_files -norecurse C:/Users/D4nny/Documents/HDL/Cache/rtl/otter_mem.mem
 relaunch_sim
 relaunch_sim
 close_sim
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+source cache_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+run 80 us
+run 80 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+run 80 us
+run 80 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+run 80 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+run 80 us
+relaunch_sim
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 200 us
+run 2 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
-launch_simulation
-open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
-source cache_tb.tcl
-run 200 us
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 2 ms
+run 2 ms
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 2 ms
+relaunch_sim
+run 2 ms
+run 5 ms
+run 5 ms
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+run 5 ms
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
 relaunch_sim
-relaunch_sim
-relaunch_sim
-run 200 us
-close_sim
-launch_simulation
-open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
-source cache_tb.tcl
+run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+run 5 ms
+relaunch_sim
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms
+relaunch_sim
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 update_compile_order -fileset sim_1
 update_compile_order -fileset sim_1
 relaunch_sim
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
+run 5 ms
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
+run 5 ms
 relaunch_sim
+run 5 ms
+run 5 ms
 relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-run 200 us
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+run 5 ms
+relaunch_sim
+run 5 ms
+add_bp {C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv} 297
+relaunch_sim
+run 5 ms
+run 20 ns
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+run 20 us
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
-run 200 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 5 ms
+add_bp {C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv} 304
 relaunch_sim
+run 5 ms
+run 5 ms
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
 relaunch_sim
-run 200 us
+run 5 ms
+run 5 ms
+run 5 ms
 save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
-save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
-save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+run 5 ms

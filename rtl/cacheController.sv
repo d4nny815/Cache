@@ -95,15 +95,16 @@ module CacheController (
             end
 
             CHECK_L1: begin
+                memValid1 = hit_imem & re_imem;
+                memValid2 = hit_dmem & (re_dmem | we_cpu_dmem);
+
                 if (hit_imem && re_imem) begin
-                    memValid1 = 1'b1;
                     next_state = CHECK_L1;
                 end
                 else if (!hit_imem && re_imem) begin
                     next_state = FETCH_IMEM;
                 end
                 else if (hit_dmem && (re_dmem || we_cpu_dmem)) begin
-                    memValid2 = 1'b1;
                     next_state = CHECK_L1;
                 end
                 else if (!hit_dmem && (re_dmem || we_cpu_dmem) && dirty_dmem) begin
@@ -113,7 +114,7 @@ module CacheController (
                     next_state = FETCH_DMEM;
                 end
                 else begin
-                    $error("Invalid state");
+                    if (~(re_imem || re_dmem || we_cpu_dmem)) $display("CC: Invalid state %x, %x, %x", re_imem, re_dmem, we_cpu_dmem);
                     next_state = CHECK_L1;
                 end
             end
@@ -123,8 +124,8 @@ module CacheController (
                 next_cl = mem_valid_mm;
                 sel_cl = 2'b00;
                 re_mm = 1'b1;
-                if (full_cl)
-                    next_state = FILL_MM;
+                if (full_cl & mem_valid_mm)
+                    next_state = FILL_IMEM;
                 else 
                     next_state = FETCH_IMEM;
             end
@@ -132,7 +133,8 @@ module CacheController (
             FILL_IMEM: begin
                 we_imem = 1'b1;
                 sel_cl = 2'b00;
-                if (mem_valid_mm)
+                next_cl = 1'b1;
+                if (full_cl)
                     next_state = CHECK_L1;
                 else
                     next_state = FILL_IMEM;
@@ -141,6 +143,7 @@ module CacheController (
             WB_DMEM: begin
                 we_cl = 1'b1;
                 sel_cl = 2'b10;
+                next_cl = 1'b1;
                 if (full_cl)
                     next_state = FILL_MM;
                 else
@@ -151,7 +154,7 @@ module CacheController (
                 we_mm = 1'b1;
                 next_cl = mem_valid_mm;
                 sel_cl = 2'b10;
-                if (full_cl)
+                if (full_cl & mem_valid_mm)
                     next_state = FETCH_DMEM;
                 else
                     next_state = FILL_MM;
@@ -162,7 +165,7 @@ module CacheController (
                 sel_cl = 2'b01;
                 next_cl = mem_valid_mm;
                 re_mm = 1'b1;
-                if (full_cl)
+                if (full_cl & mem_valid_mm)
                     next_state = FILL_DMEM;
                 else
                     next_state = FETCH_DMEM;
@@ -171,6 +174,7 @@ module CacheController (
             FILL_DMEM: begin
                 we_dmem = 1'b1;
                 sel_cl = 2'b01;
+                next_cl = 1'b1;
                 if (full_cl)
                     next_state = CHECK_L1;
                 else

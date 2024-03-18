@@ -36,7 +36,7 @@ module CacheLineAdapter #(
     localparam BYTE_BITS = 2;
 
     // addr_gen
-    logic [LINE_BITS - 1:0] counter;
+    logic [LINE_BITS - 1:0] counter = 0;
     always_ff @(posedge clk) begin
         if (clr == 1) begin
             counter <= 0;

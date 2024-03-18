@@ -19,12 +19,17 @@ module cache_tb ();
 
 
     logic [31:0] din2 = 0, dout2 = 0;
-    logic [31:0] addr2;
+    logic [31:0] addr2 = 16'h6000;
     logic read_en2 = 0;
     logic we2 = 0;
     logic memValid2;
     logic sign = 0;
     logic [1:0] size = 0;
+
+    localparam int MEM_SIZE = 2 ** 16;
+    localparam int DATA_MEM_START = 'h6000;
+    localparam int INSTR_MEM_SIZE = 1024 * 6; // 6KB of memory for Imem
+    
 
 
     Memory #(.DELAY_BITS(3)) DUT (
@@ -65,7 +70,7 @@ module cache_tb ();
         read_en1 = 0;
     endtask : read_instr_addr
 
-    task read_lines();
+    task read_instr_lines();
         int TEST_RUNS = 100;
         int WORDS_IN_LINE = 8;
 
@@ -73,36 +78,57 @@ module cache_tb ();
         for (int i=0; i<TEST_RUNS; i++) begin
             word_addr = $urandom_range(0, 16'h6000);
             for (int word_offset = 0; word_offset < WORDS_IN_LINE; word_offset++) begin
-                read_instr_addr(word_addr[15:0], word_offset[2:0], 2'b00);
-                assert (dout1 == expected_memory[addr1 / 4]) else $fatal("Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
+                read_instr_addr(word_addr[15:0], word_offset[2:0]);
+                assert (dout1 == expected_memory[addr1 / 4]) else $fatal("TB: Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
             end
         end
 
         read_en1 = 0;
         addr1 = 16'h0;
-    endtask : read_lines
+    endtask : read_instr_lines
 
-    task read_random_addr();
+    task read_data_addr(logic [31:0] addr, logic [1:0] size_i = 2'b10, logic sign_i = 0);
+        addr2 = addr;
+        read_en2 = 1;
+        size = size_i;
+        sign = sign_i;
+        @(posedge clk iff memValid2);
+        read_en2 = 0;
+    endtask : read_data_addr
+
+    task write_data_addr(logic [31:0] addr, logic [1:0] size_i = 2'b10, logic sign_i = 0, logic [31:0] data);
+        addr2 = addr;
+        we2 = 1;
+        din2 = data;
+        size = size_i;
+        sign = sign_i;
+        @(posedge clk iff memValid2);
+        read_en2 = 0;
+    endtask : write_data_addr
+
+
+    task read_data_lines();
         int TEST_RUNS = 100;
-        int instr_addr;
+        int data_addr;
+        
         for (int i=0; i<TEST_RUNS; i++) begin
-            instr_addr = $urandom_range(0, 16'h6000);
-            read_addr(instr_addr, instr_addr[2:0], 0);
-            assert (dout1 == expected_memory[addr1 / 4]) else $fatal("Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
+            data_addr = $urandom_range(16'h6000, 17'h1_0000);
+            read_data_addr(data_addr);
+            assert (dout2 == expected_memory[addr2 / 4]) else $fatal("TB: Memory read error at addr2 %x, expected1 %x, got %x", addr2, expected_memory[addr2 / 4], dout2);
         end
-        read_en1 = 0;
-        addr1 = 16'h0;
-    endtask : read_random_addr
+
+    endtask : read_data_lines
 
     task read_entire_Imem();
-        int max_addr = 1024 * 6; // 6KB of memory for Imem
-        for (int i=0; i < max_addr; i++) begin
-            addr1 = i << 2;
-            read_en1 = 1;
-            @(posedge clk iff memValid1);
-            assert (dout1 == expected_memory[i]) else $fatal("Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[i], dout1);
+        int tmp;
+        int WORDS_IN_LINE = 8;
+        for (int i=0; i < INSTR_MEM_SIZE; i++) begin
+            for (int j=0; j<WORDS_IN_LINE; j++) begin
+                read_instr_addr(i << 2, j[2:0]);
+                tmp = addr1 / 4;
+                assert (dout1 == expected_memory[tmp]) else $fatal("Memory read error at addr1 %x in dec %d, expected2 %x, got %x", addr1, tmp, expected_memory[tmp], dout1);
+            end
         end
-        
         read_en1 = 0;
         addr1 = 16'h0;
     endtask : read_entire_Imem
@@ -110,90 +136,64 @@ module cache_tb ();
 
     // this tests lw 
     task read_entire_Dmem();
-        int max_addr = (2 ** 16) >> 2;         // 64KB of memory for total memory
-        int instr_mem_size = 1024 * 6; // 6KB of memory for Imem
-        sign = 0;
-        size = 2'b10;
-
-        $display("reading from %x to %x", instr_mem_size, max_addr);
-        for (int i=instr_mem_size; i < max_addr; i++) begin
-            addr2 = i << 2;
-            read_en2 = 1;
-            @(posedge clk iff memValid2);
-            assert (dout2 == expected_memory[i]) else $fatal("Memory read error at addr2 %x in dec %d, expected %x, got %x", addr2, addr2 >> 2, expected_memory[i], dout2);
+        for (int i=INSTR_MEM_SIZE; i < MEM_SIZE >> 2; i++) begin
+            for (int j=0; j<4; j++) begin
+                read_data_addr(i << 2, 2'b10, 0);
+                assert (dout2 == expected_memory[i]) else $fatal("Memory read error at addr2 %x, expected3 %x, got %x", addr2, expected_memory[i], dout2);
+            end
         end
+        read_en2 = 0;
     endtask : read_entire_Dmem
 
     // lb, lbu, lh, lhu
     task read_diff_size();
-        int instr_mem_size = 1024 * 6;
 
-        logic [31:0] word;
-        logic [15:0] half_word;
-        logic [7:0] bytes;
-
-        logic [31:0] expected;
+        logic [31:0] expected_word;
+        logic [15:0] expected_half_word;
+        logic [7:0] expected_byte;
 
         // lb
-        read_en2 = 1;
-        sign = 0;
-        size = 2'b00;
         for (int i=0; i<200; i++) begin
-            if (i % 4 == 0) word = expected_memory[instr_mem_size + (i >> 2)];
-            addr2 = (instr_mem_size << 2) + i;
-            bytes = word[(i % 4) * 8 +: 8];
-            expected = {{24{bytes[7]}}, bytes};
-            @(posedge clk iff memValid2);
-            assert (dout2 == expected) else $fatal("Memory read error at addr2 %x, expected %x, got %x", addr2, expected, dout2);
+            if (i % 4 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 2)];
+            expected_byte = expected_word[(i % 4) * 8 +: 8];
+            read_data_addr((INSTR_MEM_SIZE << 2) + i, 2'b00, 0);
+            assert (dout2[7:0] == expected_byte) else $fatal("TB: LB failed Memory read error at addr2 %x, expected_byte %x, got %x", addr2, expected_byte, dout2[7:0]);
         end
 
         read_en2 = 0;
         ##(3);
 
         // lh
-        read_en2 = 1;
-        sign = 0;
-        size = 2'b01;
         for (int i=0; i<200; i++) begin
-            if (i % 2 == 0) word = expected_memory[instr_mem_size + (i >> 1)];
-            addr2 = (instr_mem_size << 2) + (i << 1);
-            half_word = word[(i % 2) * 16 +: 16];
-            expected = {{16{half_word[15]}}, half_word};
-            @(posedge clk iff memValid2);
-            assert (dout2 == expected) else $fatal("Memory read error at addr2 %x, expected %x, got %x", addr2, expected, dout2);
+            if (i % 2 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 1)];
+            expected_half_word = expected_word[(i % 2) * 16 +: 16];
+            read_data_addr((INSTR_MEM_SIZE << 2) + (i << 1), 2'b01, 0);
+            assert (dout2[15:0] == expected_half_word) else $fatal("TB: LH failed Memory read error at addr2 %x, expected_half_word %x, got %x", addr2, expected_half_word, dout2[15:0]);
         end
 
         read_en2 = 0;
         ##(3);
 
-        // lbu
-        read_en2 = 1;
-        sign = 1;
-        size = 2'b00;
+       // lbu
         for (int i=0; i<200; i++) begin
-            if (i % 4 == 0) word = expected_memory[instr_mem_size + (i >> 2)];
-            addr2 = (instr_mem_size << 2) + i;
-            bytes = word[(i % 4) * 8 +: 8];
-            expected = {24'b0, bytes};
-            @(posedge clk iff memValid2);
-            assert (dout2 == expected) else $fatal("Memory read error at addr2 %x, expected %x, got %x", addr2, expected, dout2);
+            if (i % 4 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 2)];
+            read_data_addr((INSTR_MEM_SIZE << 2) + i, 2'b00, 1);
+            expected_byte = expected_word[(i % 4) * 8 +: 8];
+            assert (dout2[7:0] == expected_byte) else $fatal("TB: LBU failed Memory read error at addr2 %x, expected_byte %x, got %x", addr2, expected_byte, dout2);
         end
 
         read_en2 = 0;
-        ##(3);
+       ##(3);
 
-        // lhu
-        read_en2 = 1;
-        sign = 1;
-        size = 2'b01;
+//        // lhu
         for (int i=0; i<200; i++) begin
-            if (i % 2 == 0) word = expected_memory[instr_mem_size + (i >> 1)];
-            addr2 = (instr_mem_size << 2) + (i << 1);
-            half_word = word[(i % 2) * 16 +: 16];
-            expected = {16'b0, half_word};
-            @(posedge clk iff memValid2);
-            assert (dout2 == expected) else $fatal("Memory read error at addr2 %x, expected %x, got %x", addr2, expected, dout2);
+            if (i % 2 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 1)];
+            read_data_addr((INSTR_MEM_SIZE << 2) + (i << 1), 2'b01, 1);
+            expected_half_word = expected_word[(i % 2) * 16 +: 16];
+            assert (dout2[15:0] == expected_half_word) else $fatal("TB: LBU failed Memory read error at addr2 %x, expected_half_word %x, got %x", addr2, expected_half_word, dout2[15:0]);
         end
+
+        read_en2 = 0;
     endtask : read_diff_size
 
 
@@ -203,42 +203,28 @@ module cache_tb ();
         logic [4:0] index_offset = 0;
         logic [21:0] tag = 0;
         logic [21:0] data_tag = 'h18;
-
-        sign = 0;
-        size = 2;
-        @(posedge clk);
+        logic [31:0] expected_data;
 
         // cold start
-        we2 = 1;
         tag = 0;
         for (int i=0; i<8; i++) begin
-            addr2 = {tag + data_tag, index_offset, i[2:0], byte_offset};
-            din2 = i + 1;
-            @(posedge clk iff memValid2);
+            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i + 1);
         end
         we2 = 0;
 
         // fill 2nd set
         @(posedge clk);
-        we2 = 1;
         tag = 1;
         for (int i=0; i<8; i++) begin
-            addr2 = {tag + data_tag, index_offset, i[2:0], byte_offset};
-            din2 = i * 2 + 1;
-
-            @(posedge clk iff memValid2);
+            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i * 2 + 1);
         end
-        @(posedge clk iff memValid2);
         we2 = 0;
 
         // overwrite 1st set        
         @(posedge clk);
-        we2 = 1;
         tag = 2;
         for (int i=0; i<8; i++) begin
-            addr2 = {tag + data_tag, index_offset, i[2:0], byte_offset};
-            din2 = i * 3 + 1;
-            @(posedge clk iff memValid2);
+            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i * 3 + 1);
         end
         we2 = 0;
 
@@ -246,47 +232,72 @@ module cache_tb ();
         @(posedge clk);
         din2 = 32'hdead_beef;
         tag = 0;
-        for (int i=0; i<8; i++) begin
-            addr2 = {tag + data_tag, index_offset, i[2:0], byte_offset};
-            read_en2 = 1;
-            @(posedge clk iff memValid2);
-            assert (dout2 == i + 1) else $fatal("Memory read error at addr2 %x, expected %x, got %x", addr2, i * 2 + 1, dout2);
+        
+        for (int j=0; j<8; j++) begin
+            read_data_addr({tag + data_tag, index_offset, j[2:0], byte_offset}, 2'b10, 0);
+            expected_data = j + 1;
+            assert (dout2 == expected_data) else $fatal("TB: Writeback failed Memory read error at addr2 %x, expected_data %x, got %x", addr2, expected_data, dout2);
         end
-        @(posedge clk iff memValid2);
 
     endtask : writeback
     
     // read imem and dmem at same time
+    task read_both_mem();
+        logic [31:0] expected_data, expected_instr;
 
-    // imem miss and dmem hit
+        for (int i=0; i<100; i++) begin
+            read_instr_addr(i << 2, i[2:0]);
+            read_data_addr((INSTR_MEM_SIZE + i) << 2, 2'b10, 0);
+            read_en1 = 1;
+            read_en2 = 1;
+            @(posedge clk iff memValid1 && memValid2);
+            expected_instr = expected_memory[i];
+            expected_data = expected_memory[INSTR_MEM_SIZE + i];
+            assert (dout1 == expected_instr) else $fatal("TB: Memory read error at addr1 %x, expected_instr %x, got %x", addr1, expected_instr, dout1);
+            assert (dout2 == expected_data) else $fatal("TB: Memory read error at addr2 %x, expected_data %x, got %x", addr2, expected_data, dout2);
+        end
 
-    // imem hit and dmem miss
-
-    // imem miss and dmem miss
-
+        read_en1 = 0;
+        read_en2 = 0;
+    endtask : read_both_mem
 
     initial begin
         reset_cache();
         $display("Starting test...");
  
-         read_lines();
-         $display("line by line read test passed");
+        reset_cache();
+        read_instr_lines();
+        $display("INSTR line by line read test passed");
 
-        //  ##(3);
-        //  read_random_addr();
-        //  $display("random addr1 test passed");
+        ##(3);
+        reset_cache();
+        read_data_lines();
+        $display("DATA line by line read test passed");
+        
+        ##(3);
+        reset_cache();
+        read_entire_Imem();
+        $display("Entire Imem read test passed");
 
-        //  ##(3);
-        //  read_entire_Imem();
-        //  $display("Entire Imem read test passed");
+        ##(3);
+        reset_cache();
+        read_entire_Dmem();      
+        $display("Entire Dmem read test passed");
 
+        ##(3);
+        reset_cache();
+        read_diff_size();
+        $display("Different size read test passed");
 
-        // read_entire_Dmem();      
+        ##(3);
+        reset_cache();
+        read_both_mem();
+        $display("Read both mem test passed");
 
-        // read_diff_size();  
-
-        // writeback();
-
+        ##(3);
+        reset_cache();
+        writeback();
+        $display("Writeback test passed");
 
         ##(3);
         $display("Test finished");
