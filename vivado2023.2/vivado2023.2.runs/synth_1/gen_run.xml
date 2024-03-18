@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710707309" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710738700" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/InstrL1.dcp">
+  <File Type="VDS-TIMING-PB" Name="Memory_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Memory_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Memory.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Memory_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Memory_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Memory_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Memory.vds"/>
   <File Type="REPORTS-TCL" Name="Memory_reports.tcl"/>
   <File Type="PA-TCL" Name="Memory.tcl"/>
-  <File Type="RDS-DCP" Name="Memory.dcp"/>
-  <File Type="RDS-UTIL" Name="Memory_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Memory_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../rtl/CacheLineAdapter.sv">
@@ -37,13 +40,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../rtl/cacheController.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../rtl/clk_div.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -95,7 +94,6 @@ read_verilog -library xil_defaultlib -sv {
   /home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv
   /home/danny/Documents/HDL/Cache/rtl/MainMemory.sv
   /home/danny/Documents/HDL/Cache/rtl/cacheController.sv
-  /home/danny/Documents/HDL/Cache/rtl/clk_div.sv
   /home/danny/Documents/HDL/Cache/rtl/Memory.sv
 }
 OPTRACE "Adding files" END { }

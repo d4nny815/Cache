@@ -3,6 +3,7 @@ module clk_2n_div  #(parameter n=13) (
    input rst,   
    output logic clockout);  
 
+    // #initial count = 0;
     logic [n:0] count = 0; 
 
     always_ff @(posedge clockin) begin

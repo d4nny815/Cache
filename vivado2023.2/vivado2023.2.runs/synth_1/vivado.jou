@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Mar 17 13:28:32 2024
-# Process ID: 177044
+# Start of session at: Sun Mar 17 22:11:44 2024
+# Process ID: 230821
 # Current directory: /home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.runs/synth_1
 # Command line: vivado -log Memory.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Memory.tcl
 # Log file: /home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.runs/synth_1/Memory.vds
 # Journal file: /home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.runs/synth_1/vivado.jou
-# Running On: framework13, OS: Linux, CPU Frequency: 2090.697 MHz, CPU Physical cores: 12, Host memory: 33340 MB
+# Running On: framework13, OS: Linux, CPU Frequency: 1354.024 MHz, CPU Physical cores: 12, Host memory: 33340 MB
 #-----------------------------------------------------------
 source Memory.tcl -notrace

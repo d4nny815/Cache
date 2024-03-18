@@ -11,89 +11,56 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="53.451 ns"></ZoomStartTime>
-      <ZoomEndTime time="335.252 ns"></ZoomEndTime>
-      <Cursor1Time time="100.451 ns"></Cursor1Time>
+      <ZoomStartTime time="830.291 ns"></ZoomStartTime>
+      <ZoomEndTime time="883.942 ns"></ZoomEndTime>
+      <Cursor1Time time="870.141 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="204"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
-   <wvobject fp_name="/mm_tb/DUT/RST" type="logic">
-      <obj_property name="ElementShortName">RST</obj_property>
-      <obj_property name="ObjectShortName">RST</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_CLK" type="logic">
+   <WVObjectSize size="10" />
+   <wave_markers>
+      <marker label="" time="865000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/MEM_CLK">
       <obj_property name="ElementShortName">MEM_CLK</obj_property>
       <obj_property name="ObjectShortName">MEM_CLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_RDEN1" type="logic">
-      <obj_property name="ElementShortName">MEM_RDEN1</obj_property>
-      <obj_property name="ObjectShortName">MEM_RDEN1</obj_property>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/MEM_RE">
+      <obj_property name="ElementShortName">MEM_RE</obj_property>
+      <obj_property name="ObjectShortName">MEM_RE</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_RDEN2" type="logic">
-      <obj_property name="ElementShortName">MEM_RDEN2</obj_property>
-      <obj_property name="ObjectShortName">MEM_RDEN2</obj_property>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/MEM_WE">
+      <obj_property name="ElementShortName">MEM_WE</obj_property>
+      <obj_property name="ObjectShortName">MEM_WE</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_WE2" type="logic">
-      <obj_property name="ElementShortName">MEM_WE2</obj_property>
-      <obj_property name="ObjectShortName">MEM_WE2</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/MEM_DATA_IN">
+      <obj_property name="ElementShortName">MEM_DATA_IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DATA_IN[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_ADDR1" type="array">
-      <obj_property name="ElementShortName">MEM_ADDR1[13:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_ADDR1[13:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/MEM_ADDR">
+      <obj_property name="ElementShortName">MEM_ADDR[29:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_ADDR[29:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_ADDR2" type="array">
-      <obj_property name="ElementShortName">MEM_ADDR2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_ADDR2[31:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/MEM_DOUT">
+      <obj_property name="ElementShortName">MEM_DOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DOUT[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_DIN2" type="array">
-      <obj_property name="ElementShortName">MEM_DIN2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_DIN2[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/memValid">
+      <obj_property name="ElementShortName">memValid</obj_property>
+      <obj_property name="ObjectShortName">memValid</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_SIZE" type="array">
-      <obj_property name="ElementShortName">MEM_SIZE[1:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_SIZE[1:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/count">
+      <obj_property name="ElementShortName">count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">count[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_SIGN" type="logic">
-      <obj_property name="ElementShortName">MEM_SIGN</obj_property>
-      <obj_property name="ObjectShortName">MEM_SIGN</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/expected_mem[0]">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_DOUT1" type="array">
-      <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/MEM_DOUT2" type="array">
-      <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/memValid1" type="logic">
-      <obj_property name="ElementShortName">memValid1</obj_property>
-      <obj_property name="ObjectShortName">memValid1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/wordAddr1" type="array">
-      <obj_property name="ElementShortName">wordAddr1[13:0]</obj_property>
-      <obj_property name="ObjectShortName">wordAddr1[13:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/wordAddr2" type="array">
-      <obj_property name="ElementShortName">wordAddr2[13:0]</obj_property>
-      <obj_property name="ObjectShortName">wordAddr2[13:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/memReadWord" type="array">
-      <obj_property name="ElementShortName">memReadWord[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memReadWord[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/memReadSized" type="array">
-      <obj_property name="ElementShortName">memReadSized[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memReadSized[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/_MEM_DOUT1" type="array">
-      <obj_property name="ElementShortName">_MEM_DOUT1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">_MEM_DOUT1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mm_tb/DUT/byteOffset" type="array">
-      <obj_property name="ElementShortName">byteOffset[1:0]</obj_property>
-      <obj_property name="ObjectShortName">byteOffset[1:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/memory[0]">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
    </wvobject>
 </wave_config>

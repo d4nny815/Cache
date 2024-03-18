@@ -8,55 +8,68 @@ module mm_tb ();
 
     default clocking tb_clk @(posedge clk); endclocking
 
-    logic we = 0;
     logic reset = 0;
-    logic [13:0] addr = 0;
-    logic [31:0] instr;
-    logic [31:0] instr_buffer [7:0];
-    logic memValid;
+    logic we, re, memValid;
+
+    logic [31:0] mem_addr;
+    logic [31:0] din, dout;
+
+    logic [31:0] expected_mem [0:2**14-1];
+    initial $readmemh("otter_mem.mem", expected_mem, 0, 2**14-1);
 
 
     MainMemory #(.DELAY_BITS(3)) DUT (
-        .RST                (reset),
+        // .RST                (reset),
         .MEM_CLK            (clk),
-        .MEM_RDEN1          (1'b1),     // read enable Instruction
-        .MEM_RDEN2          (0),     // read enable data
-        .MEM_WE2            (0),     // write enable.
-        .MEM_ADDR1          (addr),     // Instruction Memory word Addr (Connect to PC[15:2])
-        .MEM_ADDR2          (0),     // Data Memory Addr
-        .MEM_DIN2           (0),     // Data to save
-        .MEM_SIZE           (0),     // 0-Byte, 1-Half, 2-Word
-        .MEM_SIGN           (0),     // 1-unsigned 0-signed
-        .MEM_DOUT1          (instr),     // Instruction
-        .MEM_DOUT2          (),     // Data
-        .memValid1          (memValid)
+        .MEM_RE             (re),             // read enable Instruction
+        .MEM_WE             (we),                // write enable.
+        .MEM_ADDR           (mem_addr[31:2]),             // Instruction Memory word Addr (Connect to PC[15:2])
+        .MEM_DATA_IN        (din),     // Data    to save
+        .MEM_DOUT           (dout),     // Data
+        .memValid           (memValid)
     );
 
-    task reset_l1();
-        reset = 1;
-        ##(2);
-        reset = 0;
-    endtask : reset_l1
+    task dead_mode();
+        re = 0;
+        we = 0;
+        mem_addr = -1;
+        din = 32'hdead_beef;
+        @(posedge clk);
+    endtask : dead_mode
 
+    task read_addr(logic [31:0] addr);
+        re = 1;
+        we = 0;
+        mem_addr = addr;
+        @(posedge clk iff memValid);
+        re = 0;
+    endtask : read_addr
 
-    task read_line();
-        for (int i = 0; i < 8; i++) begin
-            addr = i;
-            @(posedge memValid);
-            instr_buffer[i] = instr;
-        end
-    endtask : read_line
+    task write_addr(logic [31:0] addr, logic [31:0] data);
+        re = 0;
+        we = 1;
+        mem_addr = addr;
+        din = data;
+        @(posedge clk iff memValid);
+        we = 0;
+    endtask : write_addr
 
     initial begin
-        reset_l1();
 
         $display("Starting test...");
-        read_line();
+        for (int i = 0; i < 10; i++) begin
+            read_addr(i << 2);
+            assert (dout == expected_mem[i]) else $fatal("Error at address %d, expected: %d, got: %d", i, expected_mem[i], dout);
+        end
+        $display("delay");
 
-        ##(3);
-        $display("Checking lines...");
-        // check_lines();
+        for (int i = 0; i < 10; i++) begin
+            write_addr(i << 2, i);
+            read_addr(i << 2);
+            assert (dout == i) else $fatal("Error at address %d, expected: %d, got: %d", i, i, dout);
+        end
 
+        dead_mode();
 
         ##(3);
         $display("Test finished");

@@ -11,7 +11,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Memory.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1277.016 ; gain = 5.961 ; free physical = 14675 ; free virtual = 24918
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1278.020 ; gain = 5.961 ; free physical = 18236 ; free virtual = 28501
 Command: read_checkpoint -auto_incremental -incremental /home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.srcs/utils_1/imports/synth_1/InstrL1.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.srcs/utils_1/imports/synth_1/InstrL1.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -23,64 +23,63 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 177073
+INFO: [Synth 8-7075] Helper process launched with PID 230842
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1701.543 ; gain = 409.684 ; free physical = 13991 ; free virtual = 24255
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1701.609 ; gain = 411.684 ; free physical = 17459 ; free virtual = 27792
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/danny/Documents/HDL/Cache/rtl/Memory.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'InstrL1' [/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'InstrL1' [/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv:20]
 	Parameter WORD_SIZE bound to: 32 - type: integer 
 	Parameter ADDR_SIZE bound to: 14 - type: integer 
 	Parameter LINES_PER_SET bound to: 32 - type: integer 
 	Parameter WORDS_PER_LINE bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'InstrL1' (0#1) [/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv:2]
-INFO: [Synth 8-6157] synthesizing module 'DataL1' [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'InstrL1' (0#1) [/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'DataL1' [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:26]
 	Parameter WORD_SIZE bound to: 32 - type: integer 
 	Parameter ADDR_SIZE bound to: 32 - type: integer 
 	Parameter LINES_PER_SET bound to: 32 - type: integer 
 	Parameter WORDS_PER_LINE bound to: 8 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:154]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:162]
-INFO: [Synth 8-6155] done synthesizing module 'DataL1' (0#1) [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:20]
-INFO: [Synth 8-6157] synthesizing module 'CacheLineAdapter' [/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'CacheLineAdapter' (0#1) [/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'MainMemory' [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:160]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:168]
+INFO: [Synth 8-6155] done synthesizing module 'DataL1' (0#1) [/home/danny/Documents/HDL/Cache/rtl/DataL1.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'CacheLineAdapter' [/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv:20]
+	Parameter WORD_SIZE bound to: 32 - type: integer 
+	Parameter WORDS_PER_LINE bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CacheLineAdapter' (0#1) [/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'MainMemory' [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:17]
 	Parameter DELAY_BITS bound to: 3 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'otter_mem.mem' is read successfully [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:30]
-INFO: [Synth 8-6157] synthesizing module 'clk_2n_div' [/home/danny/Documents/HDL/Cache/rtl/clk_div.sv:1]
-	Parameter n bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clk_2n_div' (0#1) [/home/danny/Documents/HDL/Cache/rtl/clk_div.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'MainMemory' (0#1) [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'CacheController' [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:22]
-INFO: [Synth 8-226] default block is never used [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:84]
-INFO: [Synth 8-6155] done synthesizing module 'CacheController' (0#1) [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:22]
+INFO: [Synth 8-3876] $readmem data file 'otter_mem.mem' is read successfully [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:48]
+INFO: [Synth 8-6155] done synthesizing module 'MainMemory' (0#1) [/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'CacheController' [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:31]
+INFO: [Synth 8-226] default block is never used [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:91]
+INFO: [Synth 8-6155] done synthesizing module 'CacheController' (0#1) [/home/danny/Documents/HDL/Cache/rtl/cacheController.sv:31]
 INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/danny/Documents/HDL/Cache/rtl/Memory.sv:23]
-WARNING: [Synth 8-7129] Port MEM_ADDR2[29] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[28] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[27] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[26] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[25] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[24] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[23] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[22] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[21] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[20] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[19] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[18] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[17] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[16] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[15] in module MainMemory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port MEM_ADDR2[14] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[29] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[28] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[27] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[26] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[25] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[24] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[23] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[22] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[21] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[20] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[19] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[18] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[17] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[16] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[15] in module MainMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR[14] in module MainMemory is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr_i[4] in module CacheLineAdapter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr_i[3] in module CacheLineAdapter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr_i[2] in module CacheLineAdapter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr_i[1] in module CacheLineAdapter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr_i[0] in module CacheLineAdapter is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1790.480 ; gain = 498.621 ; free physical = 13978 ; free virtual = 24243
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1791.578 ; gain = 501.652 ; free physical = 17376 ; free virtual = 27670
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1805.324 ; gain = 513.465 ; free physical = 13970 ; free virtual = 24234
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1809.391 ; gain = 519.465 ; free physical = 17376 ; free virtual = 27670
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -88,41 +87,23 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1813.328 ; gain = 521.469 ; free physical = 13970 ; free virtual = 24234
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1817.395 ; gain = 527.469 ; free physical = 17376 ; free virtual = 27670
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'CacheController'
-There may be more BRAMs than expected because of power optimized decomposition 
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MainMemory:/memory_reg"
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                     INIT |                              000 |                              000
                 CHECK_L1 |                              001 |                              001
               FETCH_IMEM |                              010 |                              010
-               FILL_IMEM |                              011 |                              011
-                 WB_DMEM |                              100 |                              100
-                 FILL_MM |                              101 |                              101
-              FETCH_DMEM |                              110 |                              110
-               FILL_DMEM |                              111 |                              111
+                 WB_DMEM |                              011 |                              100
+                 FILL_MM |                              100 |                              101
+              FETCH_DMEM |                              101 |                              110
+               FILL_DMEM |                              110 |                              111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'CacheController'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1831.141 ; gain = 539.281 ; free physical = 13961 ; free virtual = 24206
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1835.207 ; gain = 545.281 ; free physical = 17370 ; free virtual = 27664
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -131,13 +112,12 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
-	               32 Bit    Registers := 10    
-	                4 Bit    Registers := 1     
+	               32 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
 +---RAMs : 
 	             512K Bit	(16384 X 32 bit)          RAMs := 1     
 	               8K Bit	(32 X 256 bit)          RAMs := 4     
@@ -149,14 +129,14 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit        Muxes := 25    
 	   8 Input   32 Bit        Muxes := 2     
 	  16 Input   32 Bit        Muxes := 1     
-	   4 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   14 Bit        Muxes := 1     
-	  21 Input    3 Bit        Muxes := 1     
-	   8 Input    2 Bit        Muxes := 1     
+	  17 Input    3 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 5     
 	   4 Input    1 Bit        Muxes := 1     
-	   8 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -174,49 +154,19 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-6851] RAM (set1_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
-INFO: [Synth 8-6851] RAM (set0_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
-There may be more BRAMs than expected because of power optimized decomposition 
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory/main_memory/memory_reg"
+INFO: [Synth 8-6851] RAM (instr_mem/set1_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+INFO: [Synth 8-6851] RAM (instr_mem/set0_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13715 ; free virtual = 23963
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17021 ; free virtual = 27324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Block RAM: Preliminary Mapping Report (see note below)
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Memory      | main_memory/memory_reg | 16 K x 32(READ_FIRST)  | W |   | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
-Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
-
 Distributed RAM: Preliminary Mapping Report (see note below)
 +------------+------------------------------------+-----------+----------------------+-----------------+
 |Module Name | RTL Object                         | Inference | Size (Depth x Width) | Primitives      | 
 +------------+------------------------------------+-----------+----------------------+-----------------+
-|instr_mem   | tag0_reg                           | Implied   | 32 x 6               | RAM32X1S x 6    | 
-|instr_mem   | tag1_reg                           | Implied   | 32 x 6               | RAM32X1S x 6    | 
-|instr_mem   | set1_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
-|instr_mem   | set0_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
 |data_mem    | tag0_reg                           | Implied   | 32 x 22              | RAM32X1S x 22   | 
 |data_mem    | tag1_reg                           | Implied   | 32 x 22              | RAM32X1S x 22   | 
 |data_mem    | set0_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
@@ -233,28 +183,16 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13715 ; free virtual = 23964
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17128 ; free virtual = 27431
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-Block RAM: Final Mapping Report
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Memory      | main_memory/memory_reg | 16 K x 32(READ_FIRST)  | W |   | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
-+------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
-
 Distributed RAM: Final Mapping Report
 +------------+------------------------------------+-----------+----------------------+-----------------+
 |Module Name | RTL Object                         | Inference | Size (Depth x Width) | Primitives      | 
 +------------+------------------------------------+-----------+----------------------+-----------------+
-|instr_mem   | tag0_reg                           | Implied   | 32 x 6               | RAM32X1S x 6    | 
-|instr_mem   | tag1_reg                           | Implied   | 32 x 6               | RAM32X1S x 6    | 
-|instr_mem   | set1_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
-|instr_mem   | set0_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
 |data_mem    | tag0_reg                           | Implied   | 32 x 22              | RAM32X1S x 22   | 
 |data_mem    | tag1_reg                           | Implied   | 32 x 22              | RAM32X1S x 22   | 
 |data_mem    | set0_reg                           | Implied   | 32 x 256             | RAM32X1S x 256  | 
@@ -268,24 +206,8 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance main_memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13713 ; free virtual = 23961
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17128 ; free virtual = 27431
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -303,37 +225,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13735 ; free virtual = 23983
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17139 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13735 ; free virtual = 23983
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17139 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17139 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17139 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17138 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17138 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -351,60 +273,57 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BUFG     |     1|
 |2     |CARRY4   |     4|
-|3     |LUT1     |     3|
-|4     |LUT2     |    28|
-|5     |LUT3     |    57|
-|6     |LUT4     |   595|
-|7     |LUT5     |   787|
-|8     |LUT6     |   935|
-|9     |MUXF7    |   128|
-|10    |MUXF8    |    34|
+|3     |LUT1     |     1|
+|4     |LUT2     |    21|
+|5     |LUT3     |     9|
+|6     |LUT4     |   181|
+|7     |LUT5     |   599|
+|8     |LUT6     |   465|
+|9     |MUXF7    |    20|
+|10    |MUXF8    |     6|
 |11    |RAM16X1S |    32|
-|12    |RAM32X1S |  1080|
-|13    |RAMB36E1 |    16|
-|14    |FDRE     |   272|
-|15    |IBUF     |    86|
-|16    |OBUF     |    66|
+|12    |RAM32X1S |   556|
+|13    |FDRE     |   169|
+|14    |IBUF     |    72|
+|15    |OBUF     |    66|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+---------------------+-----------------+------+
 |      |Instance             |Module           |Cells |
 +------+---------------------+-----------------+------+
-|1     |top                  |                 |  4124|
-|2     |  cache_controller   |CacheController  |  1730|
-|3     |  cache_line_adapter |CacheLineAdapter |    39|
-|4     |  data_mem           |DataL1           |   886|
-|5     |  instr_mem          |InstrL1          |  1062|
-|6     |  main_memory        |MainMemory       |   253|
-|7     |    MM_DIV           |clk_2n_div       |    17|
+|1     |top                  |                 |  2202|
+|2     |  cache_controller   |CacheController  |   692|
+|3     |  cache_line_adapter |CacheLineAdapter |   467|
+|4     |  data_mem           |DataL1           |   896|
+|5     |  main_memory        |MainMemory       |     7|
 +------+---------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17138 ; free virtual = 27430
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.711 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 2069.719 ; gain = 777.852 ; free physical = 13734 ; free virtual = 23982
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.793 ; gain = 766.867 ; free physical = 17138 ; free virtual = 27430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2056.801 ; gain = 766.867 ; free physical = 17138 ; free virtual = 27430
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2069.719 ; gain = 0.000 ; free physical = 14023 ; free virtual = 24271
-INFO: [Netlist 29-17] Analyzing 1294 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2056.801 ; gain = 0.000 ; free physical = 17433 ; free virtual = 27724
+INFO: [Netlist 29-17] Analyzing 618 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1080 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.738 ; gain = 0.000 ; free physical = 14011 ; free virtual = 24259
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 556 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2112.820 ; gain = 0.000 ; free physical = 17428 ; free virtual = 27726
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1112 instances were transformed.
+  A total of 588 instances were transformed.
   RAM16X1S => RAM32X1S (RAMS32): 32 instances
-  RAM32X1S => RAM32X1S (inverted pins: WCLK) (RAMS32): 1080 instances
+  RAM32X1S => RAM32X1S (inverted pins: WCLK) (RAMS32): 556 instances
 
-Synth Design complete | Checksum: 85a1d418
+Synth Design complete | Checksum: 875ca463
 INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 2125.773 ; gain = 842.820 ; free physical = 14017 ; free virtual = 24265
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1748.953; main = 1423.279; forked = 383.801
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3062.426; main = 2125.742; forked = 992.711
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2149.750 ; gain = 0.000 ; free physical = 14017 ; free virtual = 24265
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2112.855 ; gain = 830.867 ; free physical = 17427 ; free virtual = 27725
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1727.690; main = 1407.764; forked = 378.295
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3045.996; main = 2112.824; forked = 989.199
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2136.832 ; gain = 0.000 ; free physical = 17427 ; free virtual = 27725
 INFO: [Common 17-1381] The checkpoint '/home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.runs/synth_1/Memory.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Memory_utilization_synth.rpt -pb Memory_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 17 13:29:29 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 17 22:12:30 2024...

@@ -58,12 +58,12 @@ module cache_tb ();
         @(posedge clk);
     endtask : reset_cache
 
-    task read_addr(logic [15:0] base_addr, logic [2:0] word_offset, logic [1:0] byte_offset);
-        addr1 = {base_addr[15:5], word_offset, byte_offset};
+    task read_instr_addr(logic [15:0] base_addr, logic [2:0] word_offset);
+        addr1 = {base_addr[15:5], word_offset, 2'b00};
         read_en1 = 1;
         @(posedge clk iff memValid1);
         read_en1 = 0;
-    endtask : read_addr
+    endtask : read_instr_addr
 
     task read_lines();
         int TEST_RUNS = 100;
@@ -73,7 +73,7 @@ module cache_tb ();
         for (int i=0; i<TEST_RUNS; i++) begin
             word_addr = $urandom_range(0, 16'h6000);
             for (int word_offset = 0; word_offset < WORDS_IN_LINE; word_offset++) begin
-                read_addr(word_addr[15:0], word_offset[2:0], 2'b00);
+                read_instr_addr(word_addr[15:0], word_offset[2:0], 2'b00);
                 assert (dout1 == expected_memory[addr1 / 4]) else $fatal("Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
             end
         end
@@ -269,8 +269,8 @@ module cache_tb ();
         reset_cache();
         $display("Starting test...");
  
-        //  read_lines();
-        //  $display("line by line read test passed");
+         read_lines();
+         $display("line by line read test passed");
 
         //  ##(3);
         //  read_random_addr();
@@ -285,7 +285,7 @@ module cache_tb ();
 
         // read_diff_size();  
 
-        writeback();
+        // writeback();
 
 
         ##(3);
