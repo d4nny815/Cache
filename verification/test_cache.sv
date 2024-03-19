@@ -113,6 +113,7 @@ module cache_tb ();
         
         for (int i=0; i<TEST_RUNS; i++) begin
             data_addr = $urandom_range(16'h6000, 17'h1_0000);
+            data_addr = data_addr & 16'hFFFC;
             read_data_addr(data_addr);
             assert (dout2 == expected_memory[addr2 / 4]) else $fatal("TB: Memory read error at addr2 %x, expected1 %x, got %x", addr2, expected_memory[addr2 / 4], dout2);
         end

@@ -1,36 +1,36 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:82]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:117]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:129]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:142]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:160]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:171]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:182]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:193]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:82]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:118]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:130]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:143]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:161]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:172]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:183]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:194]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:258]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:240]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 82, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 117, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 129, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 142, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 160, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 171, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 182, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 193, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 82, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 118, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 130, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 143, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 161, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 172, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 183, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 194, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 240, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 258, File /home/danny/Documents/HDL/Cache/verification/test_cache.sv
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/danny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.InstrL1_default

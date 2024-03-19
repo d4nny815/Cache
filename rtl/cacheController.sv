@@ -114,7 +114,7 @@ module CacheController (
                     next_state = FETCH_DMEM;
                 end
                 else begin
-                    if (~(re_imem || re_dmem || we_cpu_dmem)) $display("CC: Invalid state %x, %x, %x", re_imem, re_dmem, we_cpu_dmem);
+                    // if (~(re_imem || re_dmem || we_cpu_dmem)) $display("CC: Invalid state %x, %x, %x", re_imem, re_dmem, we_cpu_dmem);
                     next_state = CHECK_L1;
                 end
             end
