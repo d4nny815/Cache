@@ -1,18 +1,24 @@
 /*
     instatiate this module
 
-    DataL1 myDataL1 (
-        .clk        (),
-        .reset      (),
-        .we         (),
-        .we_cache   (),
-        .sign       (),
-        .size       (),
-        .addr       (),
-        .data       (),
-        .dout       (),
-        .hit        (),
-        .dirty      ()
+    DataL1 #(
+        .WORD_SIZE      (32),
+        .ADDR_SIZE      (32),
+        .LINES_PER_SET  (32),
+        .WORDS_PER_LINE (8)
+    ) data_mem (
+        .clk            (),
+        .reset          (),
+        .we             (),
+        .we_cache       (),
+        .sign           (),
+        .size           (),
+        .addr           (),
+        .data           (),
+        .aout           (),
+        .dout           (),
+        .hit            (),
+        .dirty          ()
     );
 */
 

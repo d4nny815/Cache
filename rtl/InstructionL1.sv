@@ -1,3 +1,21 @@
+/*
+    instruction cache L1
+    InstrL1 #(
+        .ADDR_SIZE      (14), 
+        .WORD_SIZE      (32),
+        .LINES_PER_SET  (32),
+        .WORDS_PER_LINE (8)
+    ) instr_mem (
+        .clk            (),
+        .reset          (),
+        .we             (),
+        .addr           (),
+        .data           (),
+        .dout           (),
+        .hit            ()
+    );
+*/
+
 
 module InstrL1 #(
     parameter WORD_SIZE = 32,

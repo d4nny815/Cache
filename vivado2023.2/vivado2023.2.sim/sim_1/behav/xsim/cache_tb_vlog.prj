@@ -6,7 +6,6 @@ sv xil_defaultlib  \
 "../../../../../rtl/MainMemory.sv" \
 "../../../../../rtl/Memory.sv" \
 "../../../../../rtl/cacheController.sv" \
-"../../../../../rtl/clk_div.sv" \
 "../../../../../verification/test_cache.sv" \
 
 # compile glbl module

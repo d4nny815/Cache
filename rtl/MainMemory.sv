@@ -1,49 +1,60 @@
+/*
+    instaniate MainMemory
+    MainMemory #(
+        .DELAY_BITS     ()
+    ) myMemory (
+        .MEM_CLK        (),
+        .MEM_RE         (),        
+        .MEM_WE         (),        
+        .MEM_DATA_IN    (),        
+        .MEM_ADDR       (),        
+        .MEM_DOUT       (),        
+        .memValid       ()
+    );
+*/
+
+
 module MainMemory #(
     parameter DELAY_BITS = 4
     ) (
     input MEM_CLK,
-    input RST,
-    input MEM_RDEN1,                // read enable Instruction
-    input MEM_RDEN2,                // read enable data
-    input MEM_WE2,                  // write enable.
-    input [13:0] MEM_ADDR1,         // Instruction Memory word Addr (Connect to PC[15:2])
-    input [29:0] MEM_ADDR2,         // Data Memory Addr
-    input [31:0] MEM_DIN2,          // Data to save
-    output logic [31:0] MEM_DOUT1,  // Instruction
-    output logic [31:0] MEM_DOUT2,  // Data
-    output logic memValid1
+    // input RST,
+    input MEM_RE,                // read enable Instruction
+    input MEM_WE,
+    input [31:0] MEM_DATA_IN,          // Data to save
+    input [29:0] MEM_ADDR,         // Data Memory Addr
+    output logic [31:0] MEM_DOUT,  // Instruction
+    output logic memValid
     ); 
 
-    clk_2n_div #(.n(DELAY_BITS)) MM_DIV (
-        .clockin        (MEM_CLK), 
-        .rst            (RST),          
-        .clockout       (memValid1)   
-    );
+    logic [DELAY_BITS - 1:0] count = 0;
+    always_ff @(posedge MEM_CLK) begin
+        if (MEM_RE | MEM_WE)
+            count <= count + 1;
+        else
+            count <= 0;
+    end
+
+    always_comb begin
+        memValid = &count;
+    end
     
-    logic [31:0] _MEM_DOUT1, _MEM_DOUT2;
        
     (* rom_style="{distributed | block}" *)
     (* ram_decomp = "power" *) logic [31:0] memory [0:16383];
     
     initial begin
-//        $readmemh("otter_memory.mem", memory, 0, 16383);
         $readmemh("otter_mem.mem", memory, 0, 16383);
     end
     
 
-    always_ff @(posedge MEM_CLK) begin
-        if (MEM_WE2)                          // Write word to memory
-            memory[MEM_ADDR2] <= MEM_DIN2;
-        if(MEM_RDEN2)                         // Read word from memory
-            _MEM_DOUT2 <= memory[MEM_ADDR2];
-        if(MEM_RDEN1)                         // Read word from memory
-            _MEM_DOUT1 <= memory[MEM_ADDR1];
+    always_ff @(negedge MEM_CLK) begin
+        if (MEM_WE & memValid)
+            memory[MEM_ADDR] <= MEM_DATA_IN;
     end
         
     always_comb begin
-        MEM_DOUT1 = memValid1 ? _MEM_DOUT1 : 32'hdeadbeef;
-        MEM_DOUT2 = memValid1 ? _MEM_DOUT2 : 32'hdeadbeef;
-        
+        MEM_DOUT = memValid & MEM_RE ? memory[MEM_ADDR] : 32'hdead_beef;        
     end
         
  endmodule
