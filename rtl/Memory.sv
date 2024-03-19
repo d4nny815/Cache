@@ -110,7 +110,7 @@ module Memory #(
     ) data_mem (
         .clk            (MEM_CLK),
         .reset          (clr),
-        .we             (cl_sel[1] ? 1'b0 : MEM_WE2),
+        .we             (cl_sel[0] ? 1'b0 : MEM_WE2),
         .we_cache       (dmem_we),
         .sign           (cl_sel[0] ? 1'b0 : MEM_SIGN),
         .size           (cl_sel[0] ? 2'b10 : MEM_SIZE),
