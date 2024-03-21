@@ -47,6 +47,12 @@ module Memory #(
     output logic memValid2
     );
 
+    localparam INSTR_ADDR_BITS = 14;
+    localparam DATA_ADDR_BITS = 32;
+    localparam WORD_SIZE = 32;
+    localparam LINES_PER_SET = 32;
+    localparam WORDS_PER_LINE = 8;
+
     // IMEM signals
     logic imem_hit;
     logic [31:0] instr_buffer;
@@ -79,10 +85,10 @@ module Memory #(
     end
 
     InstrL1 #(
-        .ADDR_SIZE      (14), 
-        .WORD_SIZE      (32),
-        .LINES_PER_SET  (32),
-        .WORDS_PER_LINE (8)
+        .ADDR_SIZE      (INSTR_ADDR_BITS), 
+        .WORD_SIZE      (WORD_SIZE),
+        .LINES_PER_SET  (LINES_PER_SET),
+        .WORDS_PER_LINE (WORDS_PER_LINE)
     ) instr_mem (
         .clk            (MEM_CLK),
         .reset          (clr),
@@ -103,14 +109,14 @@ module Memory #(
     end
 
     DataL1 #(
-        .ADDR_SIZE      (32), 
-        .WORD_SIZE      (32),
-        .LINES_PER_SET  (32),
-        .WORDS_PER_LINE (8)
+        .ADDR_SIZE      (DATA_ADDR_BITS), 
+        .WORD_SIZE      (WORD_SIZE),
+        .LINES_PER_SET  (LINES_PER_SET),
+        .WORDS_PER_LINE (WORDS_PER_LINE)
     ) data_mem (
         .clk            (MEM_CLK),
         .reset          (clr),
-        .we             (cl_sel[0] ? 1'b0 : MEM_WE2),
+        .we             (MEM_WE2),
         .we_cache       (dmem_we),
         .sign           (cl_sel[0] ? 1'b0 : MEM_SIGN),
         .size           (cl_sel[0] ? 2'b10 : MEM_SIZE),
@@ -132,8 +138,8 @@ module Memory #(
     end
 
     CacheLineAdapter #(
-        .WORD_SIZE      (32),
-        .WORDS_PER_LINE (8)
+        .WORD_SIZE      (WORD_SIZE),
+        .WORDS_PER_LINE (WORDS_PER_LINE)
     ) cache_line_adapter (
         .clk            (MEM_CLK),
         .clr            (clr),
@@ -163,8 +169,7 @@ module Memory #(
         .reset          (RST),
         .re_imem        (MEM_RDEN1),
         .hit_imem       (imem_hit),
-        .re_dmem        (MEM_RDEN2),
-        .we_cpu_dmem    (MEM_WE2),
+        .dmem_access    (MEM_RDEN2 | MEM_WE2),
         .hit_dmem       (dmem_hit),
         .dirty_dmem     (dmem_dirty),
         .full_cl        (cl_full),
