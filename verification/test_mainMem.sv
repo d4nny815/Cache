@@ -17,16 +17,17 @@ module mm_tb ();
     logic [31:0] expected_mem [0:2**14-1];
     initial $readmemh("otter_mem.mem", expected_mem, 0, 2**14-1);
 
-
-    MainMemory #(.DELAY_BITS(3)) DUT (
-        // .RST                (reset),
-        .MEM_CLK            (clk),
-        .MEM_RE             (re),             // read enable Instruction
-        .MEM_WE             (we),                // write enable.
-        .MEM_ADDR           (mem_addr[31:2]),             // Instruction Memory word Addr (Connect to PC[15:2])
-        .MEM_DATA_IN        (din),     // Data    to save
-        .MEM_DOUT           (dout),     // Data
-        .memValid           (memValid)
+    MainMemory #(
+        .DELAY_CYCLES(10),
+        .BURST_WIDTH(8)
+    ) DUT (
+        .MEM_CLK        (clk),
+        .MEM_RE         (re),        
+        .MEM_WE         (we),        
+        .MEM_DATA_IN    (din),        
+        .MEM_ADDR       (mem_addr[31:2]),        
+        .MEM_DOUT       (dout),        
+        .memValid       (memValid)
     );
 
     task dead_mode();

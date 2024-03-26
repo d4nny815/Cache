@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="830.291 ns"></ZoomStartTime>
-      <ZoomEndTime time="883.942 ns"></ZoomEndTime>
-      <Cursor1Time time="870.141 ns"></Cursor1Time>
+      <ZoomStartTime time="610.468 ns"></ZoomStartTime>
+      <ZoomEndTime time="675.907 ns"></ZoomEndTime>
+      <Cursor1Time time="622.012 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="14" />
    <wave_markers>
       <marker label="" time="865000" />
    </wave_markers>
@@ -51,16 +51,34 @@
       <obj_property name="ElementShortName">memValid</obj_property>
       <obj_property name="ObjectShortName">memValid</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/mm_tb/DUT/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/mm_tb/DUT/next_state">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/up">
+      <obj_property name="ElementShortName">up</obj_property>
+      <obj_property name="ObjectShortName">up</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/mm_tb/DUT/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/mm_tb/DUT/count">
-      <obj_property name="ElementShortName">count[2:0]</obj_property>
-      <obj_property name="ObjectShortName">count[2:0]</obj_property>
+      <obj_property name="ElementShortName">count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">count[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mm_tb/expected_mem[0]">
-      <obj_property name="ElementShortName">[0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/DELAY_CYCLES">
+      <obj_property name="ElementShortName">DELAY_CYCLES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY_CYCLES[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/mm_tb/DUT/memory[0]">
-      <obj_property name="ElementShortName">[0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+   <wvobject type="array" fp_name="/mm_tb/DUT/BURST_WIDTH">
+      <obj_property name="ElementShortName">BURST_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BURST_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

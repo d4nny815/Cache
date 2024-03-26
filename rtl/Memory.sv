@@ -27,7 +27,7 @@
 */
 
 module Memory #(
-    parameter DELAY_BITS = 4
+    parameter DELAY_CYCLES = 10
     ) (
     input RST,
     input MEM_CLK, 
@@ -50,8 +50,10 @@ module Memory #(
     localparam INSTR_ADDR_BITS = 14;
     localparam DATA_ADDR_BITS = 32;
     localparam WORD_SIZE = 32;
-    localparam LINES_PER_SET = 32;
-    localparam WORDS_PER_LINE = 8;
+    localparam WORDS_PER_LINE = 4;
+    localparam LINES_PER_SET = 8;
+    localparam WORD_OFFSET_BITS = $clog2(WORDS_PER_LINE);
+    localparam BYTE_OFFSET_BITS = 2;
 
     // IMEM signals
     logic imem_hit;
@@ -103,7 +105,7 @@ module Memory #(
        case (cl_sel)
             2'b00: dmem_addr_i = MEM_ADDR2;
             2'b01: dmem_addr_i = line_addr;
-            2'b10: dmem_addr_i = {MEM_ADDR2[31:5], line_addr[5:0]};
+            2'b10: dmem_addr_i = {MEM_ADDR2[31:WORD_OFFSET_BITS + BYTE_OFFSET_BITS], line_addr[WORD_OFFSET_BITS + BYTE_OFFSET_BITS - 1:0]};
             default: dmem_addr_i = 32'hdead_beef;
         endcase
     end
@@ -132,7 +134,7 @@ module Memory #(
         case (cl_sel)
             2'b00: cl_addr_i = {16'h0, MEM_ADDR1, 2'b0};
             2'b01: cl_addr_i = MEM_ADDR2;
-            2'b10: cl_addr_i = {wb_addr[31:5], line_addr[4:0]};
+            2'b10: cl_addr_i = {wb_addr[31:WORD_OFFSET_BITS + BYTE_OFFSET_BITS], line_addr[WORD_OFFSET_BITS + BYTE_OFFSET_BITS - 1:0]};
             default: cl_addr_i = 32'hdead_beef;
         endcase
     end
@@ -153,7 +155,8 @@ module Memory #(
     );
 
     MainMemory #(
-        .DELAY_BITS     (3)
+        .DELAY_CYCLES   (DELAY_CYCLES),
+        .BURST_WIDTH    (WORDS_PER_LINE)
     ) main_memory (
         .MEM_CLK        (MEM_CLK),
         .MEM_RE         (mm_re),        

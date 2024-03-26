@@ -1,11 +1,2 @@
 Time resolution is 1 ps
 Starting test...
-INSTR line by line read test passed
-DATA line by line read test passed
-Entire Imem read test passed
-Entire Dmem read test passed
-Different size read test passed
-Read both mem test passed
-Writeback test passed
-Test finished
-$finish called at time : 2591385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 305

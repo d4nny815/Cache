@@ -29,10 +29,15 @@ module cache_tb ();
     localparam int MEM_SIZE = 2 ** 16;
     localparam int DATA_MEM_START = 'h6000;
     localparam int INSTR_MEM_SIZE = 1024 * 6; // 6KB of memory for Imem
-    
+    localparam int TEST_RUNS = 100;
+    localparam int WORDS_IN_LINE = 4;
+    localparam int WORD_OFFSET_BITS = $clog2(WORDS_IN_LINE);
+    localparam int LINES_PER_SET = 8;
+    localparam int INDEX_BITS = $clog2(LINES_PER_SET);
+    localparam int BYTE_OFFSET_BITS = 2;
 
 
-    Memory #(.DELAY_BITS(3)) DUT (
+    Memory #(.DELAY_CYCLES(10)) DUT (
         .MEM_CLK        (clk),
         .RST            (reset),
         .MEM_RDEN1      (read_en1),        
@@ -63,22 +68,19 @@ module cache_tb ();
         @(posedge clk);
     endtask : reset_cache
 
-    task read_instr_addr(logic [15:0] base_addr, logic [2:0] word_offset);
-        addr1 = {base_addr[15:5], word_offset, 2'b00};
+    task read_instr_addr(logic [15:0] base_addr, logic [WORD_OFFSET_BITS-1:0] word_offset);
+        addr1 = {base_addr[15:WORD_OFFSET_BITS], word_offset, 2'b00};
         read_en1 = 1;
         @(posedge clk iff memValid1);
         read_en1 = 0;
     endtask : read_instr_addr
 
     task read_instr_lines();
-        int TEST_RUNS = 100;
-        int WORDS_IN_LINE = 8;
-
         int word_addr;
         for (int i=0; i<TEST_RUNS; i++) begin
-            word_addr = $urandom_range(0, 16'h6000);
+            word_addr = $urandom_range(0, INSTR_MEM_SIZE);
             for (int word_offset = 0; word_offset < WORDS_IN_LINE; word_offset++) begin
-                read_instr_addr(word_addr[15:0], word_offset[2:0]);
+                read_instr_addr(word_addr[15:0], word_offset[WORD_OFFSET_BITS-1:0]);
                 assert (dout1 == expected_memory[addr1 / 4]) else $fatal("TB: Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
             end
         end
@@ -108,11 +110,10 @@ module cache_tb ();
 
 
     task read_data_lines();
-        int TEST_RUNS = 100;
         int data_addr;
         
         for (int i=0; i<TEST_RUNS; i++) begin
-            data_addr = $urandom_range(16'h6000, 17'h1_0000);
+            data_addr = $urandom_range(DATA_MEM_START, MEM_SIZE);
             data_addr = data_addr & 16'hFFFC;
             read_data_addr(data_addr);
             assert (dout2 == expected_memory[addr2 / 4]) else $fatal("TB: Memory read error at addr2 %x, expected1 %x, got %x", addr2, expected_memory[addr2 / 4], dout2);
@@ -121,13 +122,10 @@ module cache_tb ();
     endtask : read_data_lines
 
     task read_entire_Imem();
-        int tmp;
-        int WORDS_IN_LINE = 8;
-        for (int i=0; i < INSTR_MEM_SIZE; i++) begin
+        for (int i=0; i<INSTR_MEM_SIZE; i++) begin
             for (int j=0; j<WORDS_IN_LINE; j++) begin
-                read_instr_addr(i << 2, j[2:0]);
-                tmp = addr1 / 4;
-                assert (dout1 == expected_memory[tmp]) else $fatal("Memory read error at addr1 %x in dec %d, expected2 %x, got %x", addr1, tmp, expected_memory[tmp], dout1);
+                read_instr_addr(i, j[WORD_OFFSET_BITS-1:0]);
+                assert (dout1 == expected_memory[addr1 / 4]) else $fatal("Memory read error at addr1 %x in dec %d, expected2 %x, got %x", addr1, addr1 / 4, expected_memory[addr1 / 4], dout1);
             end
         end
         read_en1 = 0;
@@ -186,7 +184,7 @@ module cache_tb ();
         read_en2 = 0;
        ##(3);
 
-//        // lhu
+       // lhu
         for (int i=0; i<200; i++) begin
             if (i % 2 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 1)];
             read_data_addr((INSTR_MEM_SIZE << 2) + (i << 1), 2'b01, 1);
@@ -199,33 +197,34 @@ module cache_tb ();
 
 
     task writeback();
-        logic [1:0] byte_offset = 0;
-        logic [2:0] word_offset = 0;
-        logic [4:0] index_offset = 0;
-        logic [21:0] tag = 0;
-        logic [21:0] data_tag = 'h18;
+        logic [BYTE_OFFSET_BITS-1:0] byte_offset = 0;
+        logic [WORD_OFFSET_BITS-1:0] word_offset = 0;
+        logic [INDEX_BITS-1:0] index_offset = 0;
+        localparam tag_bits = 32 - INDEX_BITS - WORD_OFFSET_BITS - BYTE_OFFSET_BITS;
+        logic [tag_bits-1:0] tag = 0;
+        logic [tag_bits-1:0] data_tag_start = 'h18;
         logic [31:0] expected_data;
 
         // cold start
         tag = 0;
-        for (int i=0; i<8; i++) begin
-            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i + 1);
+        for (int i=0; i<WORDS_IN_LINE; i++) begin
+            write_data_addr({tag + data_tag_start, index_offset, i[WORD_OFFSET_BITS-1:0], byte_offset}, 2'b10, 0, i + 1);
         end
         we2 = 0;
 
         // fill 2nd set
         @(posedge clk);
         tag = 1;
-        for (int i=0; i<8; i++) begin
-            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i * 2 + 1);
+        for (int i=0; i<WORDS_IN_LINE; i++) begin
+            write_data_addr({tag + data_tag_start, index_offset, i[WORD_OFFSET_BITS-1:0], byte_offset}, 2'b10, 0, i * 2 + 1);
         end
         we2 = 0;
 
         // overwrite 1st set        
         @(posedge clk);
         tag = 2;
-        for (int i=0; i<8; i++) begin
-            write_data_addr({tag + data_tag, index_offset, i[2:0], byte_offset}, 2'b10, 0, i * 3 + 1);
+        for (int i=0; i<WORDS_IN_LINE; i++) begin
+            write_data_addr({tag + data_tag_start, index_offset, i[WORD_OFFSET_BITS-1:0], byte_offset}, 2'b10, 0, i * 3 + 1);
         end
         we2 = 0;
 
@@ -234,8 +233,8 @@ module cache_tb ();
         din2 = 32'hdead_beef;
         tag = 0;
         
-        for (int j=0; j<8; j++) begin
-            read_data_addr({tag + data_tag, index_offset, j[2:0], byte_offset}, 2'b10, 0);
+        for (int j=0; j<WORDS_IN_LINE; j++) begin
+            read_data_addr({tag + data_tag_start, index_offset, j[WORD_OFFSET_BITS-1:0], byte_offset}, 2'b10, 0);
             expected_data = j + 1;
             assert (dout2 == expected_data) else $fatal("TB: Writeback failed Memory read error at addr2 %x, expected_data %x, got %x", addr2, expected_data, dout2);
         end
@@ -246,8 +245,8 @@ module cache_tb ();
     task read_both_mem();
         logic [31:0] expected_data, expected_instr;
 
-        for (int i=0; i<100; i++) begin
-            read_instr_addr(i << 2, i[2:0]);
+        for (int i=0; i<TEST_RUNS; i++) begin
+            read_instr_addr(i, i[WORD_OFFSET_BITS-1:0]);
             read_data_addr((INSTR_MEM_SIZE + i) << 2, 2'b10, 0);
             read_en1 = 1;
             read_en2 = 1;
@@ -266,7 +265,6 @@ module cache_tb ();
         reset_cache();
         $display("Starting test...");
  
-        reset_cache();
         read_instr_lines();
         $display("INSTR line by line read test passed");
 

@@ -1,23 +1,19 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CacheLineAdapter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DataL1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstrL1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MainMemory
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Memory
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CacheController
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/danny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:74]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:75]
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:111]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:125]
-WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
-WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:203]
-WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
-WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
-WARNING: [VRFC 10-3824] variable 'data_tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:206]
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [/home/danny/Documents/HDL/Cache/verification/test_cache.sv:205]
