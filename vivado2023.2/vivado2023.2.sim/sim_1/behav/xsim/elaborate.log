@@ -21,24 +21,24 @@ INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal 
 INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 228, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 229, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 29. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 9. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" Line 20. Module InstrL1_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" Line 26. Module DataL1_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 20. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module MainMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 2. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module SinglePortDelayMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" Line 31. Module CacheController doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 29. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 9. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" Line 20. Module InstrL1_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" Line 26. Module DataL1_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 20. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module MainMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 2. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module SinglePortDelayMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" Line 31. Module CacheController doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.InstrL1_default
 Compiling module xil_defaultlib.DataL1_default
 Compiling module xil_defaultlib.CacheLineAdapter_default
-Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.SinglePortDelayMemory(BURST_LEN=...
 Compiling module xil_defaultlib.CacheController
 Compiling module xil_defaultlib.OtterMemory_default
 Compiling module xil_defaultlib.tb_clk

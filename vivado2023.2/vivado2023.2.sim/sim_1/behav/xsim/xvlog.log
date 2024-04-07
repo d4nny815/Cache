@@ -5,7 +5,7 @@ INFO: [VRFC 10-311] analyzing module DataL1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstrL1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-311] analyzing module SinglePortDelayMemory
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module OtterMemory
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib

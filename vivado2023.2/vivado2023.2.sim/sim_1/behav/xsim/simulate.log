@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Starting test...
+Read both mem test passed
+Different size read test passed
+Writeback test passed
+Test finished
+$finish called at time : 20385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 257

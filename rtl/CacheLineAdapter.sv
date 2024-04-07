@@ -1,21 +1,3 @@
-/*
-    instantiate this module to create a cache line adapter
-    CacheLineAdapter #(
-        .WORD_SIZE      (32),
-        .WORDS_PER_LINE (8)
-    ) cache_line_adapter (
-        .clk            (),
-        .clr            (),
-        .addr_i         (),
-        .data_i         (),
-        .we             (),
-        .next           (),
-        .addr_o         (),
-        .data_o         (),
-        .full           ()
-    );
-    
-*/
 
 module CacheLineAdapter #(
     parameter WORD_SIZE = 32,

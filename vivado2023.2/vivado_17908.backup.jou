@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr  7 00:50:13 2024
+# Process ID: 17908
+# Current directory: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33384 C:\Users\D4nny\Documents\HDL\Cache\vivado2023.2\vivado2023.2.xpr
+# Log file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado.log
+# Journal file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2\vivado.jou
+# Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+source cache_tb.tcl
+run 1 us
+run 1 ms
+run 1 ms
+relaunch_sim
+run 1 ms
+run 1 ms
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+source cache_tb.tcl
+run 1 ms
+relaunch_sim
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 1 ms
+run 1 ms
+relaunch_sim
+run 1 ms
+run 1 ms
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+source cache_tb.tcl
+run 1 ms
+update_compile_order -fileset sim_1
+relaunch_sim
+close_sim
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+source OtterMemoryTB.tcl
+run 1 ms
+close_sim

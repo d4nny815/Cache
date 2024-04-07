@@ -5,26 +5,6 @@
 // * THE L1s are 2-way set associative caches with 32 lines per set and 8 words per line
 // * The second level is the main memory that is used to store the data
 
-/*
-
-    instaniate MainMemory
-    Memory myMemory (
-        .MEM_CLK        (),
-        .RST            (),
-        .MEM_RDEN1      (),        
-        .MEM_RDEN2      (),        
-        .MEM_WE2        (),        
-        .MEM_ADDR1      (),        
-        .MEM_ADDR2      (),        
-        .MEM_DIN2       (),        
-        .MEM_SIZE       (),        
-        .MEM_SIGN       (),        
-        .MEM_DOUT1      (),        
-        .MEM_DOUT2      (),        
-        .memValid1      ()
-    );
-    )
-*/
 
 module OtterMemory (
     input MEM_RST,
@@ -152,17 +132,17 @@ module OtterMemory (
         .full           (cl_full)
     );
 
-    MainMemory #(
+    SinglePortDelayMemory #(
         .DELAY_CYCLES   (10),
         .BURST_LEN      (WORDS_PER_LINE)
-    ) SinglePortDelayMemory (
+    ) main_memory (
         .CLK        (MEM_CLK),
         .RE         (mm_re),        
         .WE         (mm_we),        
         .DATA_IN    (line_data),        
         .ADDR       ({2'b0, line_addr[31:2]}),        
-        .DATA_OUT       (mm_data),        
-        .MEM_VALID       (mm_mem_valid)
+        .DATA_OUT   (mm_data),        
+        .MEM_VALID  (mm_mem_valid)
     );
 
     CacheController cache_controller (
