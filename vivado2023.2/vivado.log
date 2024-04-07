@@ -1166,3 +1166,682 @@ Read both mem test passed
 Writeback test passed
 Test finished
 $finish called at time : 1562495 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 303
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cache_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:151]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:152]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:153]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:155]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:156]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <OtterMemory> not found while processing module instance <DUT> [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:39]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cache_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:151]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:152]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:153]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:155]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:156]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'MEM_RST' on this module [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:41]
+ERROR: [VRFC 10-8530] module 'OtterMemory_default' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:29]
+ERROR: [VRFC 10-8530] module 'InstrL1_default' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv:20]
+ERROR: [VRFC 10-8530] module 'DataL1_default' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv:26]
+ERROR: [VRFC 10-8530] module 'CacheLineAdapter_default' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv:20]
+ERROR: [VRFC 10-8530] module 'MainMemory(BURST_LEN=8)' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv:18]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cache_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:151]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:152]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:153]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:155]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:156]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:207]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:208]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:110]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:121]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:132]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:143]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:190]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 110, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 121, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 132, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 143, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 190, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 207, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 208, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.OtterMemory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cache_tb_behav -key {Behavioral:sim_1:Functional:cache_tb} -tclbatch {cache_tb.tcl} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+WARNING: Simulation object /mm_tb/DUT/MEM_CLK was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_RE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_WE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DATA_IN was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_ADDR was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DOUT was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/memValid was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/next_state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/up was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/rst was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/count was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/DELAY_CYCLES was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/BURST_WIDTH was not found in the design.
+source cache_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting test...
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cache_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2344.852 ; gain = 0.000
+run 1 ms
+Read both mem test passed
+Different size read test passed
+Writeback test passed
+Test finished
+$finish called at time : 24185 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 254
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sim_1
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+ERROR: [VRFC 10-2989] 'memValid2' is not declared [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:200]
+ERROR: [VRFC 10-8530] module 'OtterMemory' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:29]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'OtterMemoryTB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'OtterMemoryTB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj OtterMemoryTB_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+ERROR: [VRFC 10-2989] 'memValid2' is not declared [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:200]
+ERROR: [VRFC 10-8530] module 'OtterMemory' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:29]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'OtterMemoryTB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'OtterMemoryTB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj OtterMemoryTB_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+ERROR: [VRFC 10-2989] 'memValid2' is not declared [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:200]
+ERROR: [VRFC 10-8530] module 'OtterMemory' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:29]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'OtterMemoryTB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'OtterMemoryTB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj OtterMemoryTB_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+ERROR: [VRFC 10-2989] 'memValid2' is not declared [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:200]
+ERROR: [VRFC 10-8530] module 'OtterMemory' is ignored due to previous errors [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:29]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'OtterMemoryTB'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'OtterMemoryTB' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj OtterMemoryTB_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OtterMemoryTB
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:172]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:173]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:174]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:176]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:177]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot OtterMemoryTB_behav xil_defaultlib.OtterMemoryTB xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot OtterMemoryTB_behav xil_defaultlib.OtterMemoryTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:228]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:229]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:131]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:142]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:153]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:164]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:211]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 131, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 142, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 153, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 164, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 211, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 228, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 229, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 29. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" Line 20. Module InstrL1_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" Line 26. Module DataL1_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 20. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module MainMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" Line 31. Module CacheController doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" Line 29. Module OtterMemory_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" Line 20. Module InstrL1_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" Line 26. Module DataL1_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" Line 20. Module CacheLineAdapter_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" Line 18. Module MainMemory(BURST_LEN=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" Line 31. Module CacheController doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.OtterMemory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.OtterMemoryTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot OtterMemoryTB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "OtterMemoryTB_behav -key {Behavioral:sim_1:Functional:OtterMemoryTB} -tclbatch {OtterMemoryTB.tcl} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+WARNING: Simulation object /cache_tb/clk was not found in the design.
+WARNING: Simulation object /cache_tb/reset was not found in the design.
+WARNING: Simulation object /cache_tb/we1 was not found in the design.
+WARNING: Simulation object /cache_tb/read_en1 was not found in the design.
+WARNING: Simulation object /cache_tb/addr1 was not found in the design.
+WARNING: Simulation object /cache_tb/dout1 was not found in the design.
+WARNING: Simulation object /cache_tb/memValid1 was not found in the design.
+WARNING: Simulation object /cache_tb/din2 was not found in the design.
+WARNING: Simulation object /cache_tb/addr2 was not found in the design.
+WARNING: Simulation object /cache_tb/addr2 was not found in the design.
+WARNING: Simulation object /cache_tb/dout2 was not found in the design.
+WARNING: Simulation object /cache_tb/sign was not found in the design.
+WARNING: Simulation object /cache_tb/size was not found in the design.
+WARNING: Simulation object /cache_tb/read_en2 was not found in the design.
+WARNING: Simulation object /cache_tb/we2 was not found in the design.
+WARNING: Simulation object /cache_tb/memValid2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/state was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/next_state was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/RST was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_CLK was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_RDEN1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_RDEN2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_WE2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_ADDR1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_ADDR2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_DIN2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_SIZE was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_SIGN was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_DOUT1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/MEM_DOUT2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/mem_addr_valid1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/memValid1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/memValid2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/imem_hit was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cl_full was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/clk was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/reset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/we was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/addr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/addr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/data was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/dout was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/hit was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/hit0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/hit1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/set0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/set1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/tag0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/tag1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/valid0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/valid1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/lru_bits was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/line_buffer was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/word_offset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/set_index was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/instr_mem/tag was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/clk was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/reset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/we was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/we_cache was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/sign was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/size was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/addr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/addr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/data was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/aout was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/dout was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/hit was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/dirty was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/set0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/set1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/tag0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/tag1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/dirty0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/dirty1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/valid0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/valid1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/lru_bits was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/line_buffer was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/word_buffer was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/word_offset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/set_index was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/tag was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/byte_offset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/hit0 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/data_mem/hit1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/clk was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/clr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/addr_i was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/addr_i was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/data_i was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/we was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/next was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/addr_o was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/data_o was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/full was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/counter was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_line_adapter/line_buffer was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/CLK was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/RE was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/WE was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/DATA_IN was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/ADDR was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/MEM_VALID was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/DATA_OUT was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/DELAY_CYCLES was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/SinglePortDelayMemory/BURST_LEN was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/clk was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/reset was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/re_imem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/hit_imem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/hit_dmem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/dirty_dmem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/full_cl was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/mem_valid_mm was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/clr was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/memValid1 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/memValid2 was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/sel_cl was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/we_imem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/we_dmem was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/we_cl was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/next_cl was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/re_mm was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/we_mm was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/state was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/cache_controller/next_state was not found in the design.
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+WARNING: Simulation object /mm_tb/DUT/MEM_CLK was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_RE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_WE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DATA_IN was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_ADDR was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DOUT was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/memValid was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/next_state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/up was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/rst was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/count was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/DELAY_CYCLES was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/BURST_WIDTH was not found in the design.
+source OtterMemoryTB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting test...
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'OtterMemoryTB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2344.852 ; gain = 0.000
+run 1 ms
+Read both mem test passed
+Different size read test passed
+Writeback test passed
+Test finished
+$finish called at time : 20385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 257

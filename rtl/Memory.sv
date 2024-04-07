@@ -26,10 +26,8 @@
     )
 */
 
-module Memory #(
-    parameter DELAY_CYCLES = 10
-    ) (
-    input RST,
+module OtterMemory (
+    input MEM_RST,
     input MEM_CLK, 
     input MEM_RDEN1,                // read enable Instruction
     input MEM_RDEN2,                // read enable data
@@ -43,8 +41,8 @@ module Memory #(
     output logic IO_WR,             // IO 1-write 0-read
     output logic [31:0] MEM_DOUT1,  // Instruction
     output logic [31:0] MEM_DOUT2,  // Data
-    output logic memValid1,
-    output logic memValid2
+    output logic MEM_VALID1,
+    output logic MEM_VALID2
     );
 
     localparam INSTR_ADDR_BITS = 14;
@@ -155,7 +153,7 @@ module Memory #(
     );
 
     MainMemory #(
-        .DELAY_CYCLES   (DELAY_CYCLES),
+        .DELAY_CYCLES   (10),
         .BURST_LEN      (WORDS_PER_LINE)
     ) SinglePortDelayMemory (
         .CLK        (MEM_CLK),
@@ -178,7 +176,7 @@ module Memory #(
         .full_cl        (cl_full),
         .mem_valid_mm   (mm_mem_valid),
         .clr            (clr),
-        .memValid1      (memValid1),
+        .memValid1      (MEM_VALID1),
         .memValid2      (memValid2_control),
         .sel_cl         (cl_sel),
         .we_imem        (imem_we),
@@ -198,8 +196,8 @@ module Memory #(
             IO_WR = 1'b0;
             MEM_DOUT2 = memValid2_control & mem_addr_valid2 ? data_buffer : 32'hdead_beef;
         end
-        MEM_DOUT1 = memValid1 & mem_addr_valid1 ? instr_buffer : 32'hdead_beef;
-        memValid2 = (MEM_WE2 || MEM_RDEN2) && ~mem_map_io ? memValid2_control : 1'b1;
+        MEM_DOUT1 = MEM_VALID1 & mem_addr_valid1 ? instr_buffer : 32'hdead_beef;
+        MEM_VALID2 = (MEM_WE2 || MEM_RDEN2) && ~mem_map_io ? memValid2_control : 1'b1;
     end
 
 endmodule

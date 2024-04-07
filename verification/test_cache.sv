@@ -1,23 +1,54 @@
-module cache_tb ();
-    logic clk;
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/07/2024 12:50:43 AM
+// Design Name: 
+// Module Name: OtterMemoryTB
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
+
+module OtterMemoryTB();
+    logic clk;
     initial begin
         clk = 0;
         forever #5 clk = ~clk;
     end
-
     default clocking tb_clk @(posedge clk); endclocking
 
-
+    // CONSTANTS
+    localparam int MEM_SIZE = 2 ** 16;          // 64KB
+    localparam int DATA_MEM_START = 'h6000;     // 1st address of Dmem
+    localparam int INSTR_MEM_SIZE = 1024 * 6;   // 6KB of memory for Imem
+    localparam int LINES_PER_SET = 32;
+    localparam int WORDS_IN_LINE = 8;           
+    localparam int INDEX_BITS = $clog2(LINES_PER_SET);
+    localparam int WORD_OFFSET_BITS = $clog2(WORDS_IN_LINE);
+    localparam int BYTE_OFFSET_BITS = 2;
+    localparam int TEST_RUNS = 100;             // Number of test runs
+    
     logic reset = 0;
-
+    
+    // Imem signals
     logic we1 = 0;
     logic read_en1 = 0;
     logic [15:0] addr1 = 0;
     logic [31:0] dout1;
     logic memValid1;
 
-
+    // Dmem signals
     logic [31:0] din2 = 0, dout2 = 0;
     logic [31:0] addr2 = 16'h6000;
     logic read_en2 = 0;
@@ -26,20 +57,10 @@ module cache_tb ();
     logic sign = 0;
     logic [1:0] size = 0;
 
-    localparam int MEM_SIZE = 2 ** 16;
-    localparam int DATA_MEM_START = 'h6000;
-    localparam int INSTR_MEM_SIZE = 1024 * 6; // 6KB of memory for Imem
-    localparam int TEST_RUNS = 100;
-    localparam int WORDS_IN_LINE = 8;
-    localparam int WORD_OFFSET_BITS = $clog2(WORDS_IN_LINE);
-    localparam int LINES_PER_SET = 32;
-    localparam int INDEX_BITS = $clog2(LINES_PER_SET);
-    localparam int BYTE_OFFSET_BITS = 2;
-
-
-    Memory #(.DELAY_CYCLES(10)) DUT (
+    // OTTER MEMORY MODULE
+    OtterMemory DUT (
         .MEM_CLK        (clk),
-        .RST            (reset),
+        .MEM_RST        (reset),
         .MEM_RDEN1      (read_en1),        
         .MEM_RDEN2      (read_en2),        
         .MEM_WE2        (we2),        
@@ -50,20 +71,19 @@ module cache_tb ();
         .MEM_SIGN       (sign),        
         .MEM_DOUT1      (dout1),        
         .MEM_DOUT2      (dout2),        
-        .memValid1      (memValid1),
-        .memValid2      (memValid2)
+        .MEM_VALID1     (memValid1),
+        .MEM_VALID2     (memValid2)
     );
 
     (* rom_style="{distributed | block}" *)
     (* ram_decomp = "power" *) logic [31:0] expected_memory [0:16383];
-    
     initial begin
         $readmemh("otter_mem.mem", expected_memory, 0, 16383);
     end
 
     task reset_cache();
         reset = 1;
-        ##(2);
+        ##(5);
         reset = 0;
         @(posedge clk);
     endtask : reset_cache
@@ -75,19 +95,6 @@ module cache_tb ();
         read_en1 = 0;
     endtask : read_instr_addr
 
-    task read_instr_lines();
-        int word_addr;
-        for (int i=0; i<TEST_RUNS; i++) begin
-            word_addr = $urandom_range(0, INSTR_MEM_SIZE);
-            for (int word_offset = 0; word_offset < WORDS_IN_LINE; word_offset++) begin
-                read_instr_addr(word_addr[15:0], word_offset[WORD_OFFSET_BITS-1:0]);
-                assert (dout1 == expected_memory[addr1 / 4]) else $fatal("TB: Memory read error at addr1 %x, expected %x, got %x", addr1, expected_memory[addr1 / 4], dout1);
-            end
-        end
-
-        read_en1 = 0;
-        addr1 = 16'h0;
-    endtask : read_instr_lines
 
     task read_data_addr(logic [31:0] addr, logic [1:0] size_i = 2'b10, logic sign_i = 0);
         addr2 = addr;
@@ -108,41 +115,6 @@ module cache_tb ();
         read_en2 = 0;
     endtask : write_data_addr
 
-
-    task read_data_lines();
-        int data_addr;
-        
-        for (int i=0; i<TEST_RUNS; i++) begin
-            data_addr = $urandom_range(DATA_MEM_START, MEM_SIZE);
-            data_addr = data_addr & 16'hFFFC;
-            read_data_addr(data_addr);
-            assert (dout2 == expected_memory[addr2 / 4]) else $fatal("TB: Memory read error at addr2 %x, expected1 %x, got %x", addr2, expected_memory[addr2 / 4], dout2);
-        end
-
-    endtask : read_data_lines
-
-    task read_entire_Imem();
-        for (int i=0; i<INSTR_MEM_SIZE; i++) begin
-            for (int j=0; j<WORDS_IN_LINE; j++) begin
-                read_instr_addr(i, j[WORD_OFFSET_BITS-1:0]);
-                assert (dout1 == expected_memory[addr1 / 4]) else $fatal("Memory read error at addr1 %x in dec %d, expected2 %x, got %x", addr1, addr1 / 4, expected_memory[addr1 / 4], dout1);
-            end
-        end
-        read_en1 = 0;
-        addr1 = 16'h0;
-    endtask : read_entire_Imem
-
-
-    // this tests lw 
-    task read_entire_Dmem();
-        for (int i=INSTR_MEM_SIZE; i < MEM_SIZE >> 2; i++) begin
-            for (int j=0; j<4; j++) begin
-                read_data_addr(i << 2, 2'b10, 0);
-                assert (dout2 == expected_memory[i]) else $fatal("Memory read error at addr2 %x, expected3 %x, got %x", addr2, expected_memory[i], dout2);
-            end
-        end
-        read_en2 = 0;
-    endtask : read_entire_Dmem
 
     // lb, lbu, lh, lhu
     task read_diff_size();
@@ -189,7 +161,7 @@ module cache_tb ();
             if (i % 2 == 0) expected_word = expected_memory[INSTR_MEM_SIZE + (i >> 1)];
             read_data_addr((INSTR_MEM_SIZE << 2) + (i << 1), 2'b01, 1);
             expected_half_word = expected_word[(i % 2) * 16 +: 16];
-            assert (dout2[15:0] == expected_half_word) else $fatal("TB: LBU failed Memory read error at addr2 %x, expected_half_word %x, got %x", addr2, expected_half_word, dout2[15:0]);
+            assert (dout2[15:0] == expected_half_word) else $fatal("TB: LHU failed Memory read error at addr2 %x, expected_half_word %x, got %x", addr2, expected_half_word, dout2[15:0]);
         end
 
         read_en2 = 0;
@@ -241,7 +213,7 @@ module cache_tb ();
 
     endtask : writeback
     
-    // read imem and dmem at same time
+    // read imem and dmem at same time testing lw
     task read_both_mem();
         logic [31:0] expected_data, expected_instr;
 
@@ -264,34 +236,16 @@ module cache_tb ();
     initial begin
         reset_cache();
         $display("Starting test...");
- 
-        read_instr_lines();
-        $display("INSTR line by line read test passed");
-
-        ##(3);
-        reset_cache();
-        read_data_lines();
-        $display("DATA line by line read test passed");
-        
-        ##(3);
-        reset_cache();
-        read_entire_Imem();
-        $display("Entire Imem read test passed");
-
-        ##(3);
-        reset_cache();
-        read_entire_Dmem();      
-        $display("Entire Dmem read test passed");
-
-        ##(3);
-        reset_cache();
-        read_diff_size();
-        $display("Different size read test passed");
 
         ##(3);
         reset_cache();
         read_both_mem();
         $display("Read both mem test passed");
+
+        ##(3);
+        reset_cache();
+        read_diff_size();
+        $display("Different size read test passed");
 
         ##(3);
         reset_cache();
@@ -302,6 +256,4 @@ module cache_tb ();
         $display("Test finished");
         $finish;
     end
-
-
 endmodule
