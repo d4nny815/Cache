@@ -30,9 +30,9 @@ module cache_tb ();
     localparam int DATA_MEM_START = 'h6000;
     localparam int INSTR_MEM_SIZE = 1024 * 6; // 6KB of memory for Imem
     localparam int TEST_RUNS = 100;
-    localparam int WORDS_IN_LINE = 4;
+    localparam int WORDS_IN_LINE = 8;
     localparam int WORD_OFFSET_BITS = $clog2(WORDS_IN_LINE);
-    localparam int LINES_PER_SET = 8;
+    localparam int LINES_PER_SET = 32;
     localparam int INDEX_BITS = $clog2(LINES_PER_SET);
     localparam int BYTE_OFFSET_BITS = 2;
 

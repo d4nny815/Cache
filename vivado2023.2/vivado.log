@@ -3,10 +3,10 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Mar 20 22:22:50 2024
-# Process ID: 19124
+# Start of session at: Sun Apr  7 00:50:13 2024
+# Process ID: 17908
 # Current directory: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6896 C:\Users\D4nny\Documents\HDL\Cache\vivado2023.2\vivado2023.2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33384 C:\Users\D4nny\Documents\HDL\Cache\vivado2023.2\vivado2023.2.xpr
 # Log file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado.log
 # Journal file: C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2\vivado.jou
 # Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
@@ -69,14 +69,14 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/D4nny/Documents/tmp/Cache/vivado2023.2' since last save.
+INFO: [Project 1-313] Project file moved from '/home/danny/Documents/HDL/Cache/vivado2023.2' since last save.
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.957 ; gain = 131.902
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1549.324 ; gain = 121.523
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
@@ -108,15 +108,11 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/
 INFO: [VRFC 10-311] analyzing module CacheController
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:74]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:75]
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:111]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:125]
-WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
-WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:203]
-WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
-WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
-WARNING: [VRFC 10-3824] variable 'data_tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:206]
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
@@ -132,45 +128,45 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:82]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:118]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:130]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:143]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:161]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:172]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:183]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:194]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
 WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:258]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:240]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 82, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 118, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 130, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 143, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 161, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 172, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 183, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 194, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 240, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 258, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.InstrL1_default
-Compiling module xil_defaultlib.DataL1_default
-Compiling module xil_defaultlib.CacheLineAdapter_default
-Compiling module xil_defaultlib.MainMemory(DELAY_BITS=3)
+Compiling module xil_defaultlib.InstrL1(LINES_PER_SET=8,WORDS_PE...
+Compiling module xil_defaultlib.DataL1(LINES_PER_SET=8,WORDS_PER...
+Compiling module xil_defaultlib.CacheLineAdapter(WORDS_PER_LINE=...
+Compiling module xil_defaultlib.MainMemory(BURST_WIDTH=4)
 Compiling module xil_defaultlib.CacheController
-Compiling module xil_defaultlib.Memory(DELAY_BITS=3)
+Compiling module xil_defaultlib.Memory_default
 Compiling module xil_defaultlib.tb_clk
 Compiling module xil_defaultlib.cache_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot cache_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -178,8 +174,6 @@ INFO: [USF-XSim-98] *** Running xsim
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
 open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
-WARNING: Simulation object /cache_tb/DUT/cache_controller/re_dmem was not found in the design.
-WARNING: Simulation object /cache_tb/DUT/cache_controller/we_cpu_dmem was not found in the design.
 open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
 WARNING: Simulation object /mm_tb/DUT/MEM_CLK was not found in the design.
 WARNING: Simulation object /mm_tb/DUT/MEM_RE was not found in the design.
@@ -188,9 +182,13 @@ WARNING: Simulation object /mm_tb/DUT/MEM_DATA_IN was not found in the design.
 WARNING: Simulation object /mm_tb/DUT/MEM_ADDR was not found in the design.
 WARNING: Simulation object /mm_tb/DUT/MEM_DOUT was not found in the design.
 WARNING: Simulation object /mm_tb/DUT/memValid was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/next_state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/up was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/rst was not found in the design.
 WARNING: Simulation object /mm_tb/DUT/count was not found in the design.
-WARNING: Simulation object /mm_tb/expected_mem[0] was not found in the design.
-WARNING: Simulation object /mm_tb/DUT/memory[0] was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/DELAY_CYCLES was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/BURST_WIDTH was not found in the design.
 source cache_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -205,17 +203,48 @@ source cache_tb.tcl
 Starting test...
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'cache_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1619.680 ; gain = 32.887
-run 5 ms
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1657.922 ; gain = 73.199
+run 1 us
+run 1 ms
 INSTR line by line read test passed
 DATA line by line read test passed
 Entire Imem read test passed
+run 1 ms
 Entire Dmem read test passed
 Different size read test passed
 Read both mem test passed
-Writeback test passed
-Test finished
-$finish called at time : 2591385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 305
+Error: MW: Invalid Data access memory address 000003000
+Time: 1550545 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003010
+Time: 1550755 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003020
+Time: 1550765 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003030
+Time: 1550775 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003200
+Time: 1550795 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003210
+Time: 1551005 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003220
+Time: 1551015 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003230
+Time: 1551025 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003400
+Time: 1551045 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003410
+Time: 1551335 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003420
+Time: 1551345 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003430
+Time: 1551355 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Error: MW: Invalid Data access memory address 000003000
+Time: 1551375 ns  Iteration: 0  Process: /cache_tb/DUT/Always81_1  Scope: cache_tb.DUT  File: C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv Line: 85
+Fatal: TB: Writeback failed Memory read error at addr2 00000c00, expected_data 00000001, got deadbeef
+Time: 1551665 ns  Iteration: 0  Process: /cache_tb/writeback/Block236_44  Scope: cache_tb.writeback.Block236_44  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 239
+$finish called at time : 1551665 ns
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
 relaunch_sim
 Command: launch_simulation -step compile -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
@@ -246,15 +275,11 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/
 INFO: [VRFC 10-311] analyzing module CacheController
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:74]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:75]
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:111]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:125]
-WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
-WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:203]
-WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
-WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
-WARNING: [VRFC 10-3824] variable 'data_tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:206]
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
@@ -273,40 +298,40 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:82]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:118]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:130]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:143]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:161]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:172]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:183]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:194]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
 WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:258]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:240]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 82, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 118, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 130, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 143, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 161, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 172, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 183, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 194, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 240, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 258, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.InstrL1(LINES_PER_SET=8)
-Compiling module xil_defaultlib.DataL1(LINES_PER_SET=8)
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
 Compiling module xil_defaultlib.CacheLineAdapter_default
-Compiling module xil_defaultlib.MainMemory(DELAY_BITS=3)
+Compiling module xil_defaultlib.MainMemory_default
 Compiling module xil_defaultlib.CacheController
-Compiling module xil_defaultlib.Memory(DELAY_BITS=3)
+Compiling module xil_defaultlib.Memory_default
 Compiling module xil_defaultlib.tb_clk
 Compiling module xil_defaultlib.cache_tb
 Compiling module xil_defaultlib.glbl
@@ -314,14 +339,46 @@ Built simulation snapshot cache_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 Time resolution is 1 ps
 Starting test...
-Fatal: TB: Memory read error at addr1 56e8, expected b5bc7c3b, got 00000000
-Time: 805 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block78_26/Block80_27  Scope: cache_tb.read_instr_lines.Block78_26.Block80_27  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 82
-$finish called at time : 805 ns
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1905.035 ; gain = 0.000
-run 5 ms
-Fatal: TB: Memory read error at addr1 56ec, expected 1d2e7b8d, got 00000000
-Time: 815 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block78_26/Block80_27  Scope: cache_tb.read_instr_lines.Block78_26.Block80_27  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 82
-$finish called at time : 815 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1805.258 ; gain = 0.000
+run 1 ms
+INSTR line by line read test passed
+DATA line by line read test passed
+Entire Imem read test passed
+run 1 ms
+Entire Dmem read test passed
+Different size read test passed
+Read both mem test passed
+Writeback test passed
+Test finished
+$finish called at time : 1560535 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 303
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
 relaunch_sim
 Command: launch_simulation -step compile -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
@@ -347,15 +404,111 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/
 INFO: [VRFC 10-311] analyzing module CacheController
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cache_tb
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:74]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:75]
-WARNING: [VRFC 10-3824] variable 'TEST_RUNS' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:111]
-WARNING: [VRFC 10-3824] variable 'WORDS_IN_LINE' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:125]
-WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
-WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:203]
-WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
-WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
-WARNING: [VRFC 10-3824] variable 'data_tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:206]
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 30 differs from formal bit length 32 for port 'ADDR' [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:165]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+Starting test...
+Fatal: TB: Memory read error at addr1 2b40, expected b9f8a756, got xxxxxxxx
+Time: 315 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 315 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1966.535 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+relaunch_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
@@ -374,29 +527,30 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:82]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:118]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:130]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:143]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:161]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:172]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:183]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:194]
+WARNING: [VRFC 10-3091] actual bit length 30 differs from formal bit length 32 for port 'ADDR' [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:165]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
 WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:258]
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:240]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 82, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 118, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 130, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 143, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 161, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 172, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 183, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 194, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 240, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 258, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
@@ -405,28 +559,610 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.InstrL1_default
 Compiling module xil_defaultlib.DataL1_default
 Compiling module xil_defaultlib.CacheLineAdapter_default
-Compiling module xil_defaultlib.MainMemory(DELAY_BITS=3)
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
 Compiling module xil_defaultlib.CacheController
-Compiling module xil_defaultlib.Memory(DELAY_BITS=3)
+Compiling module xil_defaultlib.Memory_default
 Compiling module xil_defaultlib.tb_clk
 Compiling module xil_defaultlib.cache_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot cache_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 Time resolution is 1 ps
 Starting test...
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1905.035 ; gain = 0.000
-run 5 ms
+Fatal: TB: Memory read error at addr1 2b40, expected b9f8a756, got xxxxxxxx
+Time: 315 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 315 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1966.535 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cache_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/otter_mem.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 30 differs from formal bit length 32 for port 'ADDR' [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:165]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cache_tb_behav -key {Behavioral:sim_1:Functional:cache_tb} -tclbatch {cache_tb.tcl} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg} -view {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_CLK was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_RE was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_WE was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_DATA_IN was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_ADDR was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_ADDR was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/MEM_DOUT was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/memValid was not found in the design.
+WARNING: Simulation object /cache_tb/DUT/main_memory/count was not found in the design.
+open_wave_config C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/mm_tb_behav.wcfg
+WARNING: Simulation object /mm_tb/DUT/MEM_CLK was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_RE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_WE was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DATA_IN was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_ADDR was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/MEM_DOUT was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/memValid was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/next_state was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/up was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/rst was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/count was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/DELAY_CYCLES was not found in the design.
+WARNING: Simulation object /mm_tb/DUT/BURST_WIDTH was not found in the design.
+source cache_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting test...
+Fatal: TB: Memory read error at addr1 2b40, expected b9f8a756, got xxxxxxxx
+Time: 315 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 315 ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cache_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1966.535 ; gain = 0.000
+run 1 ms
+Fatal: TB: Memory read error at addr1 2b44, expected 1450152d, got xxxxxxxx
+Time: 325 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 325 ns
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+relaunch_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 30 differs from formal bit length 32 for port 'ADDR' [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:165]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+Starting test...
+Fatal: TB: Memory read error at addr1 2b40, expected b9f8a756, got xxxxxxxx
+Time: 315 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 315 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1966.535 ; gain = 0.000
+WARNING: [Wavedata 42-489] Can't add object "/cache_tb/DUT/SinglePortDelayMemory/memory" to the wave window because it has 524288 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+save_wave_config {C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/cache_tb_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+relaunch_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+ERROR: [Common 17-180] Spawn failed: No error
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 30 differs from formal bit length 32 for port 'ADDR' [C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv:165]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+Starting test...
+Fatal: TB: Memory read error at addr1 2b40, expected b9f8a756, got xxxxxxxx
+Time: 315 ns  Iteration: 0  Process: /cache_tb/read_instr_lines/Block80_27/Block82_28  Scope: cache_tb.read_instr_lines.Block80_27.Block82_28  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 84
+$finish called at time : 315 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1966.535 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+relaunch_sim
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-39] 'suspend_sim' failed due to earlier errors.
+INFO: [Common 17-17] undo 'relaunch_sim'
+INFO: [Common 17-17] undo 'relaunch_sim'
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'suspend_sim' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+Starting test...
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1966.535 ; gain = 0.000
+run 1 ms
 INSTR line by line read test passed
 DATA line by line read test passed
 Entire Imem read test passed
+run 1 ms
+Entire Dmem read test passed
+Different size read test passed
+Read both mem test passed
+Fatal: TB: Writeback failed Memory read error at addr2 0000601c, expected_data 00000008, got 0dd1c26a
+Time: 1562475 ns  Iteration: 0  Process: /cache_tb/writeback/Block236_44  Scope: cache_tb.writeback.Block236_44  File: C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv Line: 239
+$finish called at time : 1562475 ns
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\verification\test_cache.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\D4nny\Documents\HDL\Cache\rtl\MainMemory.sv:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cache_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/CacheLineAdapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheLineAdapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/DataL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/InstructionL1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrL1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/MainMemory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainMemory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/rtl/cacheController.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CacheController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb
+WARNING: [VRFC 10-3824] variable 'byte_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:200]
+WARNING: [VRFC 10-3824] variable 'word_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:201]
+WARNING: [VRFC 10-3824] variable 'index_offset' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:202]
+WARNING: [VRFC 10-3824] variable 'tag' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:204]
+WARNING: [VRFC 10-3824] variable 'data_tag_start' must explicitly be declared as automatic or static [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:205]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cache_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cache_tb_behav xil_defaultlib.cache_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:119]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:128]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:141]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:159]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:170]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:181]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:192]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:256]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:257]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv:239]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 84, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 119, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 128, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 141, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 159, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 170, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 181, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 192, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 239, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 256, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 257, File C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/HDL/Cache/vivado2023.2/vivado2023.2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstrL1_default
+Compiling module xil_defaultlib.DataL1_default
+Compiling module xil_defaultlib.CacheLineAdapter_default
+Compiling module xil_defaultlib.MainMemory(BURST_LEN=8)
+Compiling module xil_defaultlib.CacheController
+Compiling module xil_defaultlib.Memory_default
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.cache_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cache_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+Starting test...
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1978.316 ; gain = 0.000
+run 1 ms
+INSTR line by line read test passed
+DATA line by line read test passed
+Entire Imem read test passed
+run 1 ms
 Entire Dmem read test passed
 Different size read test passed
 Read both mem test passed
 Writeback test passed
 Test finished
-$finish called at time : 2591385 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 305
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 20 22:28:29 2024...
+$finish called at time : 1562495 ns : File "C:/Users/D4nny/Documents/HDL/Cache/verification/test_cache.sv" Line 303

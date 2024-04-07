@@ -50,8 +50,8 @@ module Memory #(
     localparam INSTR_ADDR_BITS = 14;
     localparam DATA_ADDR_BITS = 32;
     localparam WORD_SIZE = 32;
-    localparam WORDS_PER_LINE = 4;
-    localparam LINES_PER_SET = 8;
+    localparam WORDS_PER_LINE = 8;
+    localparam LINES_PER_SET = 32;
     localparam WORD_OFFSET_BITS = $clog2(WORDS_PER_LINE);
     localparam BYTE_OFFSET_BITS = 2;
 
@@ -156,15 +156,15 @@ module Memory #(
 
     MainMemory #(
         .DELAY_CYCLES   (DELAY_CYCLES),
-        .BURST_WIDTH    (WORDS_PER_LINE)
-    ) main_memory (
-        .MEM_CLK        (MEM_CLK),
-        .MEM_RE         (mm_re),        
-        .MEM_WE         (mm_we),        
-        .MEM_DATA_IN    (line_data),        
-        .MEM_ADDR       (line_addr[31:2]),        
-        .MEM_DOUT       (mm_data),        
-        .memValid       (mm_mem_valid)
+        .BURST_LEN      (WORDS_PER_LINE)
+    ) SinglePortDelayMemory (
+        .CLK        (MEM_CLK),
+        .RE         (mm_re),        
+        .WE         (mm_we),        
+        .DATA_IN    (line_data),        
+        .ADDR       ({2'b0, line_addr[31:2]}),        
+        .DATA_OUT       (mm_data),        
+        .MEM_VALID       (mm_mem_valid)
     );
 
     CacheController cache_controller (
